@@ -25,9 +25,9 @@ Su objetivo es permitir a **Administradores** y **Operadores** gestionar sus loc
 
 ### B. Datos de Productos Rotos ($0 y S/N)
 *   **Problema**: Backend enviaba precios como Enteros o Strings indistintamente, rompiendo el parser de la app (que esperaba solo String).
-*   **Estado**: **CORREGIDO**.
-    *   Modelo `Product` actualizado para aceptar ambos formatos (`precio` numérico y `precioUnitario` texto).
-    *   La app ahora es resiliente a este cambio de formato.
+*   **Estado**: **PERSISTE / EN INVESTIGACIÓN**.
+    *   Se intentó actualizar modelo `Product` para aceptar formatos híbridos.
+    *   **Resultado**: El usuario reporta que los datos siguen sin mostrarse correctamente. Requiere revisión profunda del JSON bruto del backend.
 
 ### C. Backend Incompleto (Error 404 Stock)
 *   **Problema**: El endpoint `PUT /api/saas/stock/{id}` no existe.
