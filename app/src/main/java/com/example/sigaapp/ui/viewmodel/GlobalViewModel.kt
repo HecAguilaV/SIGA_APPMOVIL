@@ -29,7 +29,10 @@ class GlobalViewModel(private val repository: SaaSRepository) : ViewModel() {
             _isLoading.value = true
             repository.getLocales().onSuccess {
                 _locales.value = it
-                // Optional: Select default local if needed, or keep null for "All"
+                // Si solo hay un local, seleccionarlo automáticamente
+                if (it.size == 1) {
+                    _selectedLocal.value = it.first()
+                }
             }.onFailure {
                 // Log or handle error?
             }
