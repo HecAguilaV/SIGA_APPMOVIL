@@ -1,0 +1,52 @@
+Análisis de funcionalidades solicitadas
+1. Mostrar nombre de empresa en dashboard
+Estado: ya implementado
+El login ya devuelve nombreEmpresa:
+POST /api/auth/loginResponse:{  "success": true,  "accessToken": "...",  "refreshToken": "...",  "user": {    "id": 1,    "email": "usuario@example.com",    "nombre": "Juan",    "apellido": "Pérez",    "rol": "ADMINISTRADOR",    "nombreEmpresa": "Mi Empresa",  // ✅ Ya existe    "localPorDefecto": { ... }  }}
+También existe GET /api/auth/me que devuelve lo mismo:
+GET /api/auth/meResponse:{  "success": true,  "user": {    "nombreEmpresa": "Mi Empresa",  // ✅ Disponible    ...  }}
+Conclusión: solo mostrar user.nombreEmpresa en el dashboard.
+2. Crear locales desde App Móvil
+Estado: ya implementado
+Endpoint disponible:
+POST /api/saas/localesAuthorization: Bearer <token>Content-Type: application/jsonRequest Body:{  "nombre": "Bodega Central",      // Requerido  "direccion": "Calle 123",          // Opcional  "ciudad": "Santiago"               // Opcional}Response (201 Created):{  "success": true,  "message": "Local creado exitosamente",  "local": {    "id": 1,    "nombre": "Bodega Central",    "direccion": "Calle 123",    "ciudad": "Santiago",    "activo": true,    "fechaCreacion": "2025-01-XX..."  }}
+Requisitos:
+Autenticación: JWT Bearer Token
+Permisos: solo ADMINISTRADOR (verifica SecurityUtils.puedeCrearLocales())
+Suscripción activa: requiere suscripción activa
+Empresa: se asigna automáticamente desde el token
+Conclusión: el endpoint existe; solo falta implementarlo en la App Móvil.
+3. Registrar tokens push para notificaciones
+Estado: no implementado
+No existe ningún endpoint para:
+Registrar tokens FCM/APNS
+Enviar notificaciones push
+Gestionar dispositivos
+Lo que habría que crear:
+POST /api/saas/notificaciones/token{  "token": "fcm_token_here",  "plataforma": "android" | "ios",  "deviceId": "unique_device_id"}DELETE /api/saas/notificaciones/token/{deviceId}
+Para enviar notificaciones, se necesitaría:
+Integración con Firebase Cloud Messaging (FCM) o Apple Push Notification Service (APNS)
+Tabla en BD para almacenar tokens por usuario/dispositivo
+Endpoint para enviar notificaciones (probablemente interno o admin)
+Conclusión: requiere implementación completa.
+4. Login devuelve companyName
+Estado: ya implementado
+El login devuelve nombreEmpresa (ver punto 1). Si necesitas companyName como alias, se puede agregar, pero nombreEmpresa ya está disponible.
+5. Biometría (Keystore vs EncryptedSharedPreferences)
+Estado: no aplica al backend
+Esto es del frontend (Android). El backend no maneja biometría; solo autenticación con JWT.
+En Android:
+Keystore: para almacenar claves criptográficas (más seguro)
+EncryptedSharedPreferences: para datos simples encriptados (más simple)
+El backend solo necesita recibir el token JWT válido, sin importar cómo se almacene en el cliente.
+Resumen
+Funcionalidad	Estado Backend	Acción App Móvil
+Nombre empresa en dashboard	Ya existe (nombreEmpresa)	Mostrar user.nombreEmpresa
+Crear locales	Ya existe (POST /api/saas/locales)	Implementar llamada al endpoint
+Tokens push	No existe	Requiere implementación completa
+Login con companyName	Ya existe (nombreEmpresa)	Usar campo existente
+Biometría	No aplica (frontend)	Decisión del equipo móvil
+Recomendaciones
+Nombre de empresa: usar user.nombreEmpresa del login o GET /api/auth/me.
+Crear locales: implementar POST /api/saas/locales en la App Móvil.
+Notificaciones push: requiere desarrollo completo (endpoints, integración FCM/APNS, tabla en BD).
