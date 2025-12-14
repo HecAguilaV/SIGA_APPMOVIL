@@ -19,34 +19,112 @@
 
 ---
 
-### 🚦 Estado del Proyecto: Diseño Finalizado. Listo para Desarrollar.
+## 🧭 TL;DR para desarrolladores
 
-Este documento es la fuente central de verdad. Si te sumas (colaborador, docente o inversor), aquí está el corazón, la visión y el plan de acción.
+| Ítem | Detalle |
+| --- | --- |
+| **Stack Mobile** | Kotlin · Jetpack Compose · Coroutines · Hilt · Retrofit/Ktor client |
+| **Backend Prod** | Railway (Spring/Ktor) + PostgreSQL |
+| **Credenciales demo** | `admin@test.cl` · `test123` |
+| **Mínimos** | Android Studio Ladybug / AGP 8.7 · JDK 21 · Android 14 SDK |
+| **Run** | `./gradlew uninstallDebug installDebug` o botón *Run App* |
+| **Tests** | `./gradlew test` (usa `MainDispatcherRule`) |
+| **APK Release** | `./gradlew assembleRelease` + firma con keystore propio |
+
+> **Nota:** la app se integra en tiempo real con el backend desplegado. No uses datos de producción para pruebas destructivas.
 
 ---
 
-### 📖 Tabla de Contenidos
-- [SIGA (Sistema Inteligente de Gestión de Activos)](#siga-sistema-inteligente-de-gestión-de-activos)
-    - [🚦 Estado del Proyecto: Diseño Finalizado. Listo para Desarrollar.](#-estado-del-proyecto-diseño-finalizado-listo-para-desarrollar)
-    - [📖 Tabla de Contenidos](#-tabla-de-contenidos)
-  - [Carta del Fundador (1 min)](#carta-del-fundador-1-min)
-  - [La Problemática](#la-problemática)
-  - [La Solución](#la-solución)
-  - [Propuesta de Valor](#propuesta-de-valor)
-  - [Identidad de Marca y Sistema de Diseño](#identidad-de-marca-y-sistema-de-diseño)
-    - [Logotipo](#logotipo)
-    - [Paleta de Colores](#paleta-de-colores)
-    - [Tipografía](#tipografía)
-  - [Visión de la Arquitectura](#visión-de-la-arquitectura)
-    - [Clientes: Web y Apps Nativas](#clientes-web-y-apps-nativas)
-    - [¿Por qué Kotlin?](#por-qué-kotlin)
-  - [Stack Tecnológico](#stack-tecnológico)
-  - [Modelo de datos inicial (v1)](#modelo-de-datos-inicial-v1)
-  - [Guía rápida para devs (TL;DR)](#guía-rápida-para-devs-tldr)
-  - [Flujo de trabajo con GitHub (equipo)](#flujo-de-trabajo-con-github-equipo)
-  - [Plan de Desarrollo (Gatear → Caminar → Correr)](#plan-de-desarrollo-gatear--caminar--correr)
-  - [Documentación Detallada](#documentación-detallada)
-  - [Únete a la Visión](#únete-a-la-visión)
+## 🚀 Guía rápida de instalación
+
+```bash
+# 1. Clonar
+$ git clone https://github.com/HecAguilaV/SIGA_APP.git
+$ cd SIGA_APP
+
+# 2. Configurar Java (Windows/Git Bash)
+$ export JAVA_HOME="/c/Program Files/Android/Android Studio/jbr"
+$ export PATH="$JAVA_HOME/bin:$PATH"
+
+# 3. Sincronizar dependencias
+$ ./gradlew help
+
+# 4. Ejecutar en dispositivo/emulador
+$ ./gradlew uninstallDebug installDebug
+```
+
+> En Android Studio basta con abrir la carpeta `DevAppMobile`, esperar el *Sync*, seleccionar un emulador físico/virtual y presionar ▶️ (*Run App*).
+
+### ⚙️ Variables y endpoints
+Toda la configuración remota está centralizada en `build.gradle` (flavor `prod`). Si necesitas apuntar a un backend alternativo, actualiza las constantes dentro de `BuildConfig` o el archivo `local.properties` según corresponda.
+
+---
+
+## 🧪 Pruebas y calidad
+
+- **Unit tests:**
+  ```bash
+  ./gradlew test
+  ```
+  Usa `MainDispatcherRule` (`app/src/test/java/com/example/sigaapp/testutils/MainDispatcherRule.kt`) para fijar el dispatcher principal y poder testear ViewModels con Coroutines.
+- **Logs clave:** `INVENTORY_DEBUG` y `STARTUP_DEBUG` registran la sincronización de inventario y el flujo de sesión.
+- **Warnings de Compose:** existen iconos de Material deprecated que no bloquean la entrega; se migrarán a `AutoMirrored` en una iteración posterior.
+
+---
+
+## 📱 Flujo funcional actual
+
+1. Autenticación con credenciales de administrador (`admin@test.cl` / `test123`).
+2. Selección de local, visualización de inventario en tiempo real y acciones CRUD básicas.
+3. Sincronización automática con el backend cada vez que se actualiza stock/productos.
+4. Persistencia local de la sesión; se puede forzar modo operador seleccionando otro local tras reiniciar.
+
+Próximos hitos incluyen: edición de locales desde la app, biometría para re-login rápido y refinamiento del asistente SIGA (voz + IA CRUD).
+
+---
+
+## 📦 Firmar y distribuir APK
+
+1. Genera/ubica tu keystore (ejemplo `release.keystore`).
+2. Crea `keystore.properties` (no versionado):
+   ```properties
+   storeFile=../release.keystore
+   storePassword=********
+   keyAlias=siga
+   keyPassword=********
+   ```
+3. Ajusta `build.gradle` para leer dichas propiedades.
+4. Ejecuta el build release:
+   ```bash
+   ./gradlew assembleRelease
+   ```
+5. El APK se genera en `app/build/outputs/apk/release/app-release.apk`. Entrégalo firmado al docente junto al hash SHA-256.
+
+---
+
+## 📚 Documentación complementaria
+
+- **Corazón & visión:** `docs/SIGA.md`
+- **Ecosistema completo:** `docs/ECOSISTEMA_SIGA.md`
+- **Guías técnicas:** revisa `docs/README.md` y las secciones `INSTRUCCIONES_BACKEND`, `SECURITY`, `MIGRACION_BACKEND` según tu rol.
+- **Roadmap visual:** `docs/SIGA_Roadmap_Visual.svg`
+
+---
+
+## 📖 Tabla de Contenidos
+- [Carta del Fundador (1 min)](#carta-del-fundador-1-min)
+- [La Problemática](#la-problemática)
+- [La Solución](#la-solución)
+- [Propuesta de Valor](#propuesta-de-valor)
+- [Identidad de Marca y Sistema de Diseño](#identidad-de-marca-y-sistema-de-diseño)
+- [Visión de la Arquitectura](#visión-de-la-arquitectura)
+- [Stack Tecnológico](#stack-tecnológico)
+- [Modelo de datos inicial (v1)](#modelo-de-datos-inicial-v1)
+- [Guía rápida para devs (TL;DR)](#guía-rápida-para-devs-tldr)
+- [Flujo de trabajo con GitHub (equipo)](#flujo-de-trabajo-con-github-equipo)
+- [Plan de Desarrollo (Gatear → Caminar → Correr)](#plan-de-desarrollo-gatear--caminar--correr)
+- [Documentación Detallada](#documentación-detallada)
+- [Únete a la Visión](#únete-a-la-visión)
 
 ---
 
