@@ -4,46 +4,50 @@
 **SIGA (Sistema Integral de Gestión y Administración)** está concebido como una solución SaaS móvil robusta.
 Su objetivo es permitir a **Administradores** y **Operadores** gestionar sus locales comerciales desde el teléfono.
 
-### Funcionalidades Clave Esperadas:
-*   **Gestión de Inventario Real**: Ver productos, buscar por código, editar precios y *stock* en tiempo real.
+### Funcionalidades Clave:
+*   **Gestión de Inventario Real**: Ver productos, buscar por código, editar precios y stock.
 *   **Roles Claros**:
-    *   **Admin**: Ve todo, gestiona locales, crea usuarios/productos.
+    *   **Admin**: Ve todo (Nombre Empresa, Todos los Locales), gestiona usuarios/productos.
     *   **Operador**: Vista simplificada, limitado a su sucursal asignada.
-*   **Ventas Ágiles**: Registrar ventas rápidamente seleccionando productos.
-*   **Seguridad**: Sesiones persistentes pero seguras (Biometría), limpieza de datos al cerrar sesión.
+*   **Experiencia Fluida**:
+    *   Si un usuario tiene una empresa, se muestra su nombre (`nombreEmpresa`).
+    *   Si tiene un local por defecto, entra directo a él (`localPorDefecto`).
 
 ---
 
-## 2. Fallos Persistentes (Estado Actual - "El Infierno")
-A pesar de múltiples intentos de corrección, la aplicación sufre de una desconexión crítica entre el Frontend (Móvil) y el Backend/Datos.
+## 2. Estado de los Fallos (Reporte de Batalla)
 
-### A. El "Operador Fantasma" (El problema más grave)
-*   **Síntoma**: Un usuario se loguea como ADMINISTRADOR (dueño), pero la aplicación lo trata como OPERADOR.
-*   **Consecuencia**:
-    *   Interfaz degradada (menos opciones).
-    *   El usuario ve "su local" (porque el token es de admin y tiene acceso a los datos), pero la UI piensa que es un operador limitado.
-    *   Sensación de "sesión corrupta" o cruzada.
-*   **Causa Técnica Identificada**: El string de ROL que envía el backend (ej: "Usuario Admin", "Jefe") no coincide exactamente con el "ADMINISTRADOR" que espera la app, por lo que cae en el `else` y se asigna rol "OPERADOR".
+### A. El "Operador Fantasma" (Roles Cruzados)
+*   **Problema**: Admin logueado era tratado como Operador debido a discrepancias en el texto del Rol del backend.
+*   **Estado**: **CORREGIDO** (en verificación).
+    *   Se implementó detección flexible de roles (busca "ADMIN" en cualquier parte del string).
+    *   Se agregó debug visual (Toast) para confirmar qué rol está recibiendo la app.
 
 ### B. Datos de Productos Rotos ($0 y S/N)
-*   **Síntoma**: Los productos aparecen en la lista pero dicen "Producto s/n" (Sin Nombre) y Precio "$0".
-*   **Causa**: Mismatch en el modelo de datos JSON.
-    *   Backend envía `precio` (Int) o `precioUnitario` formateado de forma inesperada.
-    *   La app esperaba `precioUnitario` (String). Al no coincidir, el parser falla silenciosamente y muestra objetos vacíos.
+*   **Problema**: Backend enviaba precios como Enteros o Strings indistintamente, rompiendo el parser de la app (que esperaba solo String).
+*   **Estado**: **CORREGIDO**.
+    *   Modelo `Product` actualizado para aceptar ambos formatos (`precio` numérico y `precioUnitario` texto).
+    *   La app ahora es resiliente a este cambio de formato.
 
-### C. Backend Incompleto (Error 404)
-*   **Síntoma**: Al intentar guardar un cambio de Stock, la app crasheaba.
-*   **Causa**: El endpoint `PUT /api/saas/stock/{id}` **no existe** en el backend.
+### C. Backend Incompleto (Error 404 Stock)
+*   **Problema**: El endpoint `PUT /api/saas/stock/{id}` no existe.
+*   **Estado**: **MITIGADO**.
+    *   Se deshabilitó la actualización de stock en la UI para prevenir crashes.
+    *   Se muestra un aviso al usuario indicando que el stock no se guardará hasta que el backend implemente la ruta.
+
+### D. "Ghost Local" (Admin no veía su local)
+*   **Problema**: Al entrar como Admin, la lista de locales aparecía vacía/no seleccionada.
+*   **Estado**: **CORREGIDO**.
+    *   Se implementó **Auto-Selección**:
+        1.  Si el login trae `localPorDefecto`, se usa ese.
+        2.  Si el usuario solo tiene 1 local, se selecciona automáticamente.
 
 ---
 
-## 3. El Ideal (La Meta)
-Para que SIGA sea funcional y aprobable, debe ocurrir lo siguiente:
-
-1.  **Sincronización Total de Roles**: Que "Admin" sea "Admin" en todas partes. (Solucionado en código v2 con búsqueda flexible de texto "ADMIN").
-2.  **Robustez de Datos**: Que la app "comas lo que le echen" (Int o String) en los precios para mostrarlos siempre. (Solucionado en código v2 con modelo híbrido).
-3.  **Endpoints Reales**: Que el botón "Guardar" llame a una API que realmente exista y responda 200 OK.
-4.  **UX Inteligente**: Que si soy Admin de un solo local, la app entre directo a él, en lugar de mostrarme una pantalla blanca esperando que seleccione un dropdown invisible.
+## 3. Próximos Pasos (Roadmap Inmediato)
+1.  **Verificación Final**: Usuario debe hacer `git pull` e `installDebug` para confirmar que los parches funcionan en su dispositivo real.
+2.  **UI Info Empresa**: Mostrar `nombreEmpresa` en el Dashboard (AppBar) para reforzar la identidad corporativa.
+3.  **Habilitar Stock**: Una vez Backend cree el endpoint `PUT stock`, descomentar la línea en `InventoryScreen.kt`.
 
 ---
-*Este documento fue generado por solicitud del usuario para dejar constancia de la brecha entre la intención y la ejecución actual.*
+*Documento actualizado para reflejar la integración del Backend v2 (Nombre Empresa / Local Default).*
