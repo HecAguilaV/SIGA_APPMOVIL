@@ -26,13 +26,13 @@ class SaaSRepository(
 
     suspend fun createProduct(nombre: String, precio: Int, descripcion: String?): Result<com.example.sigaapp.data.model.Product> {
         val token = sessionManager.getAccessToken() ?: return Result.failure(Exception("No hay sesión activa"))
-        val request = com.example.sigaapp.data.model.ProductRequest(nombre, precio, descripcion)
+        val request = com.example.sigaapp.data.model.ProductRequest(nombre, precio.toString(), descripcion)
         return apiService.createProduct(request, token).map { it.producto }
     }
 
     suspend fun updateProduct(id: Int, nombre: String, precio: Int, descripcion: String?): Result<com.example.sigaapp.data.model.Product> {
         val token = sessionManager.getAccessToken() ?: return Result.failure(Exception("No hay sesión activa"))
-        val request = com.example.sigaapp.data.model.ProductRequest(nombre, precio, descripcion)
+        val request = com.example.sigaapp.data.model.ProductRequest(nombre, precio.toString(), descripcion)
         return apiService.updateProduct(id, request, token).map { it.producto }
     }
 

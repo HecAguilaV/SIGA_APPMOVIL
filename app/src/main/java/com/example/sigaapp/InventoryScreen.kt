@@ -478,7 +478,7 @@ fun InventoryScreen(
                 items(stockItems) { item: StockItem ->
                     val isLowStock = item.cantidad <= item.min_stock
                     val itemNombre = item.producto?.nombre ?: "Producto s/n"
-                    val itemPrecio = item.producto?.precio ?: "0" // Fallback string if null
+                    val itemPrecio = item.producto?.getPrecioInt() ?: 0
                     val itemDesc = item.producto?.descripcion ?: ""
                     
                     // Look up local name

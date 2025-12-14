@@ -7,9 +7,16 @@ data class Product(
     val id: Int,
     val nombre: String,
     val descripcion: String? = null,
-    val precio: Int? = null, // Asumiendo precio entero en pesos, nullable para evitar crash
+    @kotlinx.serialization.SerialName("precioUnitario")
+    val precioUnitario: String? = null, // Backend envía precio como String
+    val activo: Boolean = true, // Soft delete flag
     val codigo: String? = null
-)
+) {
+    // Helper para obtener precio como Int
+    fun getPrecioInt(): Int {
+        return precioUnitario?.toIntOrNull() ?: 0
+    }
+}
 
 @Serializable
 data class ProductosListResponse(
@@ -82,7 +89,8 @@ data class StockUpdateRequest(
 @Serializable
 data class ProductRequest(
     val nombre: String,
-    val precio: Int,
+    @kotlinx.serialization.SerialName("precioUnitario")
+    val precioUnitario: String, // Backend espera String, no Int
     val descripcion: String? = null,
     val categoria_id: Int? = null 
 )
