@@ -49,6 +49,9 @@ fun LoginScreen(
                  sessionManager.saveCredentials(username, password)
             }
             
+            // DEBUG ROLL
+            android.widget.Toast.makeText(context, "Login Exitoso. Rol: $userRole", android.widget.Toast.LENGTH_LONG).show()
+
             navController.navigate("dashboard/${userRole}") {
                 popUpTo("login") { inclusive = true }
             }

@@ -33,15 +33,18 @@ class SessionManager(context: Context) {
 
     private val prefs: SharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
 
-    init {
-        checkAndWipeOldData()
-    }
-
     private fun checkAndWipeOldData() {
         val savedVersion = prefs.getInt(KEY_DATA_VERSION, 0)
+        android.util.Log.e("SESSION_DEBUG", "Checking version: Saved=$savedVersion, Current=$CURRENT_DATA_VERSION")
+        
         if (savedVersion < CURRENT_DATA_VERSION) {
-            android.util.Log.e("SESSION_WIPE", "Wiping old session data. Old: $savedVersion, New: $CURRENT_DATA_VERSION")
-            // Wipe everything except maybe installation UUID if we had one (we don't)
+            android.util.Log.e("SESSION_WIPE", "WIPING DATA NOW")
+            // Show toast on main thread
+            android.os.Handler(android.os.Looper.getMainLooper()).post {
+                android.widget.Toast.makeText(context, "⚠️ BORRANDO SESIÓN ANTIGUA (Fix v2) ⚠️", android.widget.Toast.LENGTH_LONG).show()
+            }
+            
+            // Wipe everything
             prefs.edit().clear().apply()
             // Write new version
             prefs.edit().putInt(KEY_DATA_VERSION, CURRENT_DATA_VERSION).apply()

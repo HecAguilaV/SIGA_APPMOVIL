@@ -9,12 +9,13 @@ data class Product(
     val descripcion: String? = null,
     @kotlinx.serialization.SerialName("precioUnitario")
     val precioUnitario: String? = null, // Backend envía precio como String
+    val precio: Int? = null, // Fallback si envía int
     val activo: Boolean = true, // Soft delete flag
     val codigo: String? = null
 ) {
     // Helper para obtener precio como Int
     fun getPrecioInt(): Int {
-        return precioUnitario?.toIntOrNull() ?: 0
+        return precioUnitario?.toIntOrNull() ?: precio ?: 0
     }
 }
 
