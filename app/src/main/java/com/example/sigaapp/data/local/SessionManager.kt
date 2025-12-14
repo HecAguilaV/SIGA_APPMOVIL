@@ -3,7 +3,7 @@ package com.example.sigaapp.data.local
 import android.content.Context
 import android.content.SharedPreferences
 
-class SessionManager(context: Context) {
+class SessionManager(private val context: Context) {
 
     companion object {
         private const val PREF_NAME = "SigaSession"
