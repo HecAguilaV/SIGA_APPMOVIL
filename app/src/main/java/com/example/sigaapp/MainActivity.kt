@@ -56,9 +56,10 @@ class MainActivity : ComponentActivity() {
                         val token = sessionManager.getAccessToken()
                         android.util.Log.e("STARTUP_DEBUG", "Restoring session. Role: $roleRaw, Token present: ${token != null}")
                         
-                        val role = when (roleRaw.uppercase()) {
-                            "ADMIN", "ADMINISTRADOR" -> "ADMINISTRADOR"
-                            "CAJERO" -> "CAJERO"
+                        val uRole = roleRaw.uppercase()
+                        val role = when {
+                            uRole.contains("ADMIN") -> "ADMINISTRADOR"
+                            uRole.contains("CAJERO") -> "CAJERO"
                             else -> "OPERADOR"
                         }
                         "dashboard/$role"
@@ -77,9 +78,10 @@ class MainActivity : ComponentActivity() {
                         ) { backStackEntry ->
                             val roleString = backStackEntry.arguments?.getString("userRole") ?: "OPERADOR"
                             val userRole = try {
-                                when (roleString.uppercase()) {
-                                    "ADMIN", "ADMINISTRADOR" -> UserRole.ADMINISTRADOR
-                                    "CAJERO" -> UserRole.CAJERO
+                                val uRole = roleString.uppercase()
+                                when {
+                                    uRole.contains("ADMIN") -> UserRole.ADMINISTRADOR
+                                    uRole.contains("CAJERO") -> UserRole.CAJERO
                                     else -> UserRole.OPERADOR
                                 }
                             } catch (e: Exception) {
