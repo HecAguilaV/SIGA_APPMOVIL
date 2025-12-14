@@ -12,8 +12,12 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.launch
 
 import com.example.sigaapp.data.model.Local
+import androidx.annotation.VisibleForTesting
 
-class InventoryViewModel(private val repository: SaaSRepository) : ViewModel() {
+class InventoryViewModel(
+    private val repository: SaaSRepository,
+    private val autoLoad: Boolean = true
+) : ViewModel() {
     private val _stockItems = MutableStateFlow<List<StockItem>>(emptyList())
     // Expose filtered list or handle filtering in UI? Better here.
     // But we need the raw list to filter locally.
@@ -30,7 +34,11 @@ class InventoryViewModel(private val repository: SaaSRepository) : ViewModel() {
         .combine(_rawStockItems) { local, items ->
             if (local == null) items else items.filter { it.local_id == local.id || it.id < 0 }
         }
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.Eagerly,
+            initialValue = emptyList()
+        )
 
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading
@@ -45,7 +53,9 @@ class InventoryViewModel(private val repository: SaaSRepository) : ViewModel() {
     val categories: StateFlow<List<com.example.sigaapp.data.model.Category>> = _categories
 
     init {
-        loadData()
+        if (autoLoad) {
+            loadData()
+        }
     }
     
     
@@ -223,5 +233,11 @@ class InventoryViewModel(private val repository: SaaSRepository) : ViewModel() {
 
     fun clearError() {
         _error.value = null
+    }
+
+    @VisibleForTesting
+    internal fun setRawStockForTest(items: List<StockItem>, selectedLocal: Local? = null) {
+        _rawStockItems.value = items
+        _selectedLocal.value = selectedLocal
     }
 }
