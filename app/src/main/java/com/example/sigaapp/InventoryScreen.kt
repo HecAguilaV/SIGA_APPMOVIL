@@ -257,9 +257,12 @@ fun InventoryScreen(
                             } else {
                                 // Update Product Details
                                 viewModel.updateProduct(editingStockItem!!.producto_id, newProductName, price, newProductDesc)
+                                
                                 // Update Stock if changed and valid
                                 if (stock != null && stock != editingStockItem!!.cantidad) {
-                                    viewModel.updateStock(editingStockItem!!.id, stock)
+                                    // FIXME: Backend endpoint api/saas/stock/3 returns 404. Disabling stock update for now.
+                                    // viewModel.updateStock(editingStockItem!!.id, stock)
+                                    android.widget.Toast.makeText(context, "Nota: El stock no se actualizó (Endpoint no disponible)", android.widget.Toast.LENGTH_LONG).show()
                                 }
                                 android.widget.Toast.makeText(context, "Cambios guardados", android.widget.Toast.LENGTH_SHORT).show()
                             }
