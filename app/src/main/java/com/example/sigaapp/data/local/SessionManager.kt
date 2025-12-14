@@ -25,9 +25,28 @@ class SessionManager(context: Context) {
         // Notifications
         private const val KEY_NOTIF_PUSH = "notif_push"
         private const val KEY_NOTIF_STOCK = "notif_stock"
+
+        // Version control for data migration/wipe
+        private const val CURRENT_DATA_VERSION = 2
+        private const val KEY_DATA_VERSION = "data_version"
     }
 
     private val prefs: SharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+
+    init {
+        checkAndWipeOldData()
+    }
+
+    private fun checkAndWipeOldData() {
+        val savedVersion = prefs.getInt(KEY_DATA_VERSION, 0)
+        if (savedVersion < CURRENT_DATA_VERSION) {
+            android.util.Log.e("SESSION_WIPE", "Wiping old session data. Old: $savedVersion, New: $CURRENT_DATA_VERSION")
+            // Wipe everything except maybe installation UUID if we had one (we don't)
+            prefs.edit().clear().apply()
+            // Write new version
+            prefs.edit().putInt(KEY_DATA_VERSION, CURRENT_DATA_VERSION).apply()
+        }
+    }
 
     fun saveAuthSession(token: String, userId: Int, role: String, nombre: String?) {
         prefs.edit().apply {
