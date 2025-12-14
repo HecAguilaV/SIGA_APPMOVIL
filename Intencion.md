@@ -28,6 +28,11 @@ Su objetivo es permitir a **Administradores** y **Operadores** gestionar sus loc
 *   **Estado**: **PERSISTE / EN INVESTIGACIÓN**.
     *   Se intentó actualizar modelo `Product` para aceptar formatos híbridos.
     *   **Resultado**: El usuario reporta que los datos siguen sin mostrarse correctamente. Requiere revisión profunda del JSON bruto del backend.
+    *   **Siguiente paso mínimo**: Capturar el payload real (logcat/curl) para documentar qué campos vienen como `string`, `number` o `null`.
+    *   **Trabajo pendiente**:
+        1.  Crear un `JsonAdapter/TypeAdapter` que acepte ambos tipos para `precio` y `stock`.
+        2.  Cubrir el adaptador con tests unitarios usando muestras reales del backend.
+        3.  Reprobar en dispositivo real y documentar el resultado en este archivo.
 
 ### C. Backend Incompleto (Error 404 Stock)
 *   **Problema**: El endpoint `PUT /api/saas/stock/{id}` no existe.
@@ -45,10 +50,10 @@ Su objetivo es permitir a **Administradores** y **Operadores** gestionar sus loc
 ---
 
 ## 3. Próximos Pasos (Roadmap Inmediato)
-1.  **Verificación Final**: Usuario debe hacer `git pull` e `installDebug` para confirmar que los parches funcionan en su dispositivo real.
+1.  **Verificación Final**: Repo ya sincronizado con `origin/main`; falta que el usuario ejecute `./gradlew uninstallDebug && ./gradlew installDebug` en su dispositivo para validar.
 2.  **UI Info Empresa**: Mostrar `nombreEmpresa` en el Dashboard (AppBar) para reforzar la identidad corporativa.
-34.  **UX Inteligente**: Que si soy Admin de un solo local, la app entre directo a él. (Hecho: Auto-selección).
-5.  **Datos Completos**: La app ahora captura `nombre`, `apellido`, `nombreEmpresa` y `ciudad` del local, alineándose 100% con el JSON del backend.
+3.  **UX Inteligente**: Que si soy Admin de un solo local, la app entre directo a él. (Hecho: Auto-selección implementada).
+4.  **Datos Completos**: La app ahora captura `nombre`, `apellido`, `nombreEmpresa` y `ciudad` del local, alineándose 100% con el JSON del backend.
 
 ---
 *Documento actualizado para reflejar la sincronización de modelos (Apellido, Ciudad) y la integración de empresa.*
