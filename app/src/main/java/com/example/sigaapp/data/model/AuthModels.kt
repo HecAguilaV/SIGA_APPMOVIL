@@ -24,6 +24,7 @@ data class User(
     val email: String,
     val rol: String,
     val nombre: String? = null,
+    val apellido: String? = null,
     val nombreEmpresa: String? = null,
     val localPorDefecto: com.example.sigaapp.data.model.Local? = null
 )

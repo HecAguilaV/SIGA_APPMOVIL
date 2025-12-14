@@ -106,7 +106,8 @@ data class ProductResponse(
 data class Local(
     val id: Int,
     val nombre: String,
-    val direccion: String? = null
+    val direccion: String? = null,
+    val ciudad: String? = null
 )
 
 @Serializable

@@ -47,7 +47,8 @@ Su objetivo es permitir a **Administradores** y **Operadores** gestionar sus loc
 ## 3. Próximos Pasos (Roadmap Inmediato)
 1.  **Verificación Final**: Usuario debe hacer `git pull` e `installDebug` para confirmar que los parches funcionan en su dispositivo real.
 2.  **UI Info Empresa**: Mostrar `nombreEmpresa` en el Dashboard (AppBar) para reforzar la identidad corporativa.
-3.  **Habilitar Stock**: Una vez Backend cree el endpoint `PUT stock`, descomentar la línea en `InventoryScreen.kt`.
+34.  **UX Inteligente**: Que si soy Admin de un solo local, la app entre directo a él. (Hecho: Auto-selección).
+5.  **Datos Completos**: La app ahora captura `nombre`, `apellido`, `nombreEmpresa` y `ciudad` del local, alineándose 100% con el JSON del backend.
 
 ---
-*Documento actualizado para reflejar la integración del Backend v2 (Nombre Empresa / Local Default).*
+*Documento actualizado para reflejar la sincronización de modelos (Apellido, Ciudad) y la integración de empresa.*
