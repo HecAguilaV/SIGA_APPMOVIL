@@ -62,10 +62,15 @@ class SaaSRepository(
         return apiService.deleteCategory(id, token)
     }
 
-    suspend fun updateStock(id: Int, cantidad: Int): Result<Boolean> {
+    suspend fun updateStock(productoId: Int, localId: Int, cantidad: Int, cantidadMinima: Int = 0): Result<Boolean> {
         val token = sessionManager.getAccessToken() ?: return Result.failure(Exception("No hay sesión activa"))
-        return apiService.updateStock(id, cantidad, token)
+        val payload = com.example.sigaapp.data.model.StockUpdateRequest(productoId, localId, cantidad, cantidadMinima)
+        return apiService.postStock(payload, token)
     }
     
+    fun saveDefaultLocalId(localId: Int) {
+        sessionManager.saveDefaultLocalId(localId)
+    }
+
     fun getDefaultLocalId(): Int? = sessionManager.getDefaultLocalId()
 }

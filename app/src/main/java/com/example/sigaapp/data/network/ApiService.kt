@@ -290,11 +290,11 @@ class ApiService {
         }
     }
 
-    suspend fun updateStock(id: Int, quantity: Int, token: String): Result<Boolean> {
+    suspend fun postStock(request: com.example.sigaapp.data.model.StockUpdateRequest, token: String): Result<Boolean> {
         return try {
-            val response = client.put("/api/saas/stock/$id") { // Update stock item
+            val response = client.post("/api/saas/stock") {
                 header("Authorization", "Bearer $token")
-                setBody(com.example.sigaapp.data.model.StockUpdateRequest(quantity))
+                setBody(request)
             }
             if (response.status.isSuccess()) {
                 Result.success(true)

@@ -49,13 +49,9 @@ class MainActivity : ComponentActivity() {
                     
                     // Determinar destino inicial
                     val isLoggedIn = sessionManager.isLoggedIn()
-                    android.util.Log.e("STARTUP_DEBUG", "App started. isLoggedIn: $isLoggedIn")
-                    
                     val startDestination = if (isLoggedIn) {
                         val roleRaw = sessionManager.getUserRole() ?: "OPERADOR"
                         val token = sessionManager.getAccessToken()
-                        android.util.Log.e("STARTUP_DEBUG", "Restoring session. Role: $roleRaw, Token present: ${token != null}")
-                        
                         val uRole = roleRaw.uppercase()
                         val role = when {
                             uRole.contains("ADMIN") -> "ADMINISTRADOR"
@@ -64,7 +60,6 @@ class MainActivity : ComponentActivity() {
                         }
                         "dashboard/$role"
                     } else {
-                        android.util.Log.e("STARTUP_DEBUG", "No session. Going to login.")
                         "login"
                     }
 
@@ -87,10 +82,8 @@ class MainActivity : ComponentActivity() {
                             } catch (e: Exception) {
                                 UserRole.OPERADOR
                             }
-                            
-                            // Obtener permisos actualizados de la sesión
+
                             val permissions = sessionManager.getPermissions()
-                            android.util.Log.e("STARTUP_DEBUG", "Navigating to Dashboard. Permissions count: ${permissions.size}")
                             val chatRepository = com.example.sigaapp.data.repository.ChatRepository(apiService, sessionManager)
                             
                             DashboardScreen(

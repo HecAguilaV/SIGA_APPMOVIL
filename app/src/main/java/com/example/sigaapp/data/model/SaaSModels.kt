@@ -1,5 +1,7 @@
 package com.example.sigaapp.data.model
 
+import java.text.NumberFormat
+import java.util.Locale
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -16,6 +18,18 @@ data class Product(
     // Helper para obtener precio como Int
     fun getPrecioInt(): Int {
         return precioUnitario?.toIntOrNull() ?: precio ?: 0
+    }
+
+    fun getPrecioDouble(): Double? {
+        val normalized = precioUnitario?.replace(",", ".")
+        return normalized?.toDoubleOrNull() ?: precio?.toDouble()
+    }
+
+    fun getPrecioDisplay(locale: Locale = Locale("es", "CL")): String {
+        val value = getPrecioDouble()
+        return if (value != null) {
+            NumberFormat.getCurrencyInstance(locale).format(value)
+        } else "Sin precio"
     }
 }
 
@@ -84,7 +98,13 @@ data class CategoryResponse(
 
 @Serializable
 data class StockUpdateRequest(
-    val cantidad: Int
+    @kotlinx.serialization.SerialName("productoId")
+    val productoId: Int,
+    @kotlinx.serialization.SerialName("localId")
+    val localId: Int,
+    val cantidad: Int,
+    @kotlinx.serialization.SerialName("cantidadMinima")
+    val cantidadMinima: Int = 0
 )
 
 @Serializable

@@ -55,6 +55,9 @@ class GlobalViewModel(private val repository: SaaSRepository) : ViewModel() {
 
     fun selectLocal(local: Local?) {
         _selectedLocal.value = local
+        if (local != null) {
+            repository.saveDefaultLocalId(local.id)
+        }
     }
 }
 

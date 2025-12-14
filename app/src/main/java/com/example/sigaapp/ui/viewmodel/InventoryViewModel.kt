@@ -191,10 +191,10 @@ class InventoryViewModel(private val repository: SaaSRepository) : ViewModel() {
         }
     }
 
-    fun updateStock(id: Int, cantidad: Int) {
+    fun updateStock(productoId: Int, localId: Int, cantidad: Int, cantidadMinima: Int = 0) {
         viewModelScope.launch {
             _isLoading.value = true
-            repository.updateStock(id, cantidad).fold(
+            repository.updateStock(productoId, localId, cantidad, cantidadMinima).fold(
                 onSuccess = {
                     loadInventory()
                 },
