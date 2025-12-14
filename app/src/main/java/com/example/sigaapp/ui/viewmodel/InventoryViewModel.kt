@@ -67,17 +67,29 @@ class InventoryViewModel(private val repository: SaaSRepository) : ViewModel() {
             val productsResult = repository.getProducts()
             val stockResult = repository.getStock()
             
+            // DEBUG: Log products response
+            productsResult.onSuccess { products ->
+                android.util.Log.e("INVENTORY_DEBUG", "=== PRODUCTOS RECIBIDOS ===")
+                products.take(3).forEach { p ->
+                    android.util.Log.e("INVENTORY_DEBUG", "ID: ${p.id}, Nombre: ${p.nombre}, PrecioUnitario: '${p.precioUnitario}', Activo: ${p.activo}")
+                }
+            }
+            
             if (productsResult.isSuccess && stockResult.isSuccess) {
                 val products = productsResult.getOrNull() ?: emptyList()
                 val stock = stockResult.getOrNull() ?: emptyList()
+                
+                android.util.Log.e("INVENTORY_DEBUG", "Total productos: ${products.size}, Total stock: ${stock.size}")
                 
                 // Create product map for fast lookup
                 val productsMap = products.associateBy { it.id }
                 
                 // Enrich stock with product data
                 val enrichedStock = stock.map { stockItem ->
+                    val producto = productsMap[stockItem.producto_id]
+                    android.util.Log.e("INVENTORY_DEBUG", "Stock ID ${stockItem.id}: producto_id=${stockItem.producto_id}, producto encontrado: ${producto != null}, precio: ${producto?.precioUnitario}")
                     stockItem.copy(
-                        producto = productsMap[stockItem.producto_id]
+                        producto = producto
                     )
                 }
                 

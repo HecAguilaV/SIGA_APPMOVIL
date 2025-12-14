@@ -48,8 +48,14 @@ class MainActivity : ComponentActivity() {
                     val cardSize by settingsViewModel.cardSize.collectAsState()
                     
                     // Determinar destino inicial
-                    val startDestination = if (sessionManager.isLoggedIn()) {
+                    val isLoggedIn = sessionManager.isLoggedIn()
+                    android.util.Log.e("STARTUP_DEBUG", "App started. isLoggedIn: $isLoggedIn")
+                    
+                    val startDestination = if (isLoggedIn) {
                         val roleRaw = sessionManager.getUserRole() ?: "OPERADOR"
+                        val token = sessionManager.getAccessToken()
+                        android.util.Log.e("STARTUP_DEBUG", "Restoring session. Role: $roleRaw, Token present: ${token != null}")
+                        
                         val role = when (roleRaw.uppercase()) {
                             "ADMIN", "ADMINISTRADOR" -> "ADMINISTRADOR"
                             "CAJERO" -> "CAJERO"
@@ -57,6 +63,7 @@ class MainActivity : ComponentActivity() {
                         }
                         "dashboard/$role"
                     } else {
+                        android.util.Log.e("STARTUP_DEBUG", "No session. Going to login.")
                         "login"
                     }
 
@@ -81,6 +88,7 @@ class MainActivity : ComponentActivity() {
                             
                             // Obtener permisos actualizados de la sesión
                             val permissions = sessionManager.getPermissions()
+                            android.util.Log.e("STARTUP_DEBUG", "Navigating to Dashboard. Permissions count: ${permissions.size}")
                             val chatRepository = com.example.sigaapp.data.repository.ChatRepository(apiService, sessionManager)
                             
                             DashboardScreen(
