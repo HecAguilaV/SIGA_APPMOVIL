@@ -263,6 +263,14 @@ fun InventoryScreen(
                                 if (stock != null && stock != editingStockItem!!.cantidad) {
                                     // FIXME: Backend endpoint api/saas/stock/3 returns 404. Disabling stock update for now.
                                     // viewModel.updateStock(editingStockItem!!.id, stock)
+                                    val item = editingStockItem
+                                    if (item != null) {
+                                        val productoId = item.producto_id
+                                        val localId = item.local_id
+                                        val minStock = item.min_stock
+                                        viewModel.updateStock(productoId, localId, stock, minStock)
+                                    }
+
                                     android.widget.Toast.makeText(context, "Nota: El stock no se actualizó (Endpoint no disponible)", android.widget.Toast.LENGTH_LONG).show()
                                 }
                                 android.widget.Toast.makeText(context, "Cambios guardados", android.widget.Toast.LENGTH_SHORT).show()
@@ -482,7 +490,7 @@ fun InventoryScreen(
                 items(stockItems) { item: StockItem ->
                     val isLowStock = item.cantidad <= item.min_stock
                     val itemNombre = item.producto?.nombre ?: "Producto s/n"
-                    val itemPrecio = item.producto?.getPrecioInt() ?: 0
+                    val itemPrecio = item.producto?.getPrecioDisplay() ?: "Sin precio"
                     val itemDesc = item.producto?.descripcion ?: ""
                     
                     // Look up local name
@@ -535,7 +543,7 @@ fun InventoryScreen(
                                 )
                                 Spacer(modifier = Modifier.height(4.dp))
                                 Text(
-                                    text = "$$itemPrecio",
+                                    text = itemPrecio,
                                     style = MaterialTheme.typography.bodyMedium,
                                     color = TextPrimary
                                 )
