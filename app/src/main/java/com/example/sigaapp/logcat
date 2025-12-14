@@ -1,0 +1,1037 @@
+--------- beginning of crash
+--------- beginning of system
+2025-12-14 00:20:53.985  1830-3350  WindowManager           system_server                        E  setClientVisible ActivityRecord{92d252f u0 com.example.sigaapp/.MainActivity t11} false
+2025-12-14 01:12:24.951  1830-1995  PKMSImpl                system_server                        E  MIUILOG- assertCallerAndPackage: uid=2000, installerPkg=null, packageName: com.example.sigaapp, msg=Install canceled by user
+2025-12-14 01:13:02.510  1830-4468  BackupManagerService    system_server                        E  Unable to finalize restore of com.example.sigaapp
+2025-12-14 01:13:26.411  1830-4678  WindowManager           system_server                        E  setClientVisible ActivityRecord{9b8b6a u0 com.example.sigaapp/.MainActivity true
+2025-12-14 01:13:26.427  1830-4678  WindowManager           system_server                        E  setClientVisible ActivityRecord{9b8b6a u0 com.example.sigaapp/.MainActivity t19} true
+2025-12-14 01:13:26.432  1830-4678  WindowManager           system_server                        E  setClientVisible ActivityRecord{9b8b6a u0 com.example.sigaapp/.MainActivity t19} true
+2025-12-14 01:13:26.470  1830-1889  WindowManager           system_server                        E  setClientVisible ActivityRecord{9b8b6a u0 com.example.sigaapp/.MainActivity t19} true
+2025-12-14 01:16:09.825  1830-1847  WindowManager           system_server                        E  setClientVisible ActivityRecord{9b8b6a u0 com.example.sigaapp/.MainActivity t19} false
+2025-12-14 01:16:20.265  1830-4988  WindowManager           system_server                        E  setClientVisible ActivityRecord{7f21d0b u0 com.example.sigaapp/.MainActivity true
+2025-12-14 01:16:20.281  1830-4988  WindowManager           system_server                        E  setClientVisible ActivityRecord{9b8b6a u0 com.example.sigaapp/.MainActivity t19} true
+2025-12-14 01:16:20.311  1830-4678  WindowManager           system_server                        E  setClientVisible ActivityRecord{9b8b6a u0 com.example.sigaapp/.MainActivity t19} true
+2025-12-14 01:16:29.549  1830-3350  WindowManager           system_server                        E  setClientVisible ActivityRecord{9b8b6a u0 com.example.sigaapp/.MainActivity t19} false
+2025-12-14 01:16:34.970  1830-5028  WindowManager           system_server                        E  setClientVisible ActivityRecord{2708dd2 u0 com.example.sigaapp/.MainActivity true
+2025-12-14 01:16:34.987  1830-5028  WindowManager           system_server                        E  setClientVisible ActivityRecord{2708dd2 u0 com.example.sigaapp/.MainActivity t20} true
+2025-12-14 01:16:34.989  1830-5028  WindowManager           system_server                        E  setClientVisible ActivityRecord{2708dd2 u0 com.example.sigaapp/.MainActivity t20} true
+2025-12-14 01:16:35.025  1830-3353  WindowManager           system_server                        E  setClientVisible ActivityRecord{2708dd2 u0 com.example.sigaapp/.MainActivity t20} true
+2025-12-14 01:16:35.440 17602-19713 ActivityThread          com.example.sigaapp                  I  TrafficStats init done
+2025-12-14 01:16:35.458 17602-19713 ActivityThread          com.example.sigaapp                  I  Miui Feature Init done
+2025-12-14 01:16:35.480 17602-17602 ActivityThread          com.example.sigaapp                  I  currentPkg not in xmlPackages
+2025-12-14 01:16:35.491 17602-19713 ActivityThread          com.example.sigaapp                  I  HardwareRenderer preload  done
+2025-12-14 01:16:35.665 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@5c0630e, reason: AppDarkModeEnable
+2025-12-14 01:16:35.679 17602-17602 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+2025-12-14 01:16:36.236 17602-17602 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+2025-12-14 01:16:36.292 17602-17602 NativeTurboSchedManager com.example.sigaapp                  I  Load libmiui_runtime
+2025-12-14 01:16:36.308 17602-17602 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+2025-12-14 01:16:37.837 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@5c0630e, reason: AppDarkModeEnable
+2025-12-14 01:16:37.897 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@5c0630e, reason: AppDarkModeEnable
+2025-12-14 01:16:37.961 17602-17602 MiuiMultiWindowUtils    com.example.sigaapp                  D  freeform resolution args raw data:{  "wide_default":{    "freeform_args": {        "vertical_portrait":{"aspect_ratio":0.626, "original_ratio":0.5643,"original_scale":0.74,"top_margin":0.168,"left_margin":0.484},        "horizontal_portrait":{"aspect_ratio":0.626, "original_ratio":0.5643,"original_scale":0.74,"top_margin":0.1222,"left_margin":0.59745},        "vertical_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.604,"top_margin":0.2596,"left_margin":0.2624},        "horizontal_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.604,"top_margin":0.213,"left_margin":0.3758}    },    "mini_freeform_args":{        "vertical_portrait":{"original_ratio":0.147},        "horizontal_portrait":{"original_ratio":0.147},        "vertical_landscape":{"original_ratio":0.165},        "horizontal_landscape":{"original_ratio":0.165}    }  },  "narrow_default": {    "freeform_args": {        "vertical_portrait":{"aspect_ratio":0.626, "original_ratio":1,"original_scale":0.74,"top_margin":0.0753,"left_margin":-1},        "horizontal_portrait":{"aspect_ratio":0.626, "original_ratio":1,"original_scale":0.5756,"top_margin":-1,"left_margin":0.0753},        "vertical_landscape":{"aspect_ratio":1.6, "original_ratio":0.6847,"original_scale":0.587,"top_margin":0.0753,"left_margin":-1},        "horizontal_landscape":{"aspect_ratio":1.6, "original_ratio":0.6847,"original_scale":0.587,"top_margin":-1,"left_margin":0.0753}    },    "mini_freeform_args":{        "vertical_portrait":{"original_ratio":0.26},        "horizontal_portrait":{"original_ratio":0.26},        "vertical_landscape":{"original_ratio":0.293},        "horizontal_landscape":{"original_ratio":0.293}    }  },  "regular_default": {    "freeform_args": {      "vertical_portrait":{"aspect_ratio":0.625, "original_ratio":1,"original_scale":0.7,"top_margin":0.109,"left_margin":-1},      "horizontal_portrait":{"aspect_ratio":0.6667, "original_ratio":1,"original_scale":0.6102,"top_margin":-1,"left_margin":0.026},      "vertical_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.4244,"top_margin":0.109,"left_margin":-1},      "horizontal_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.4244,"top_margin":-1,"left_margin":0.026}    },    "mini_freeform_args":{      "vertical_portrait":{"original_ratio":0.25},      "horizontal_portrait":{"original_ratio":0.25},      "vertical_landscape":{"original_ratio":0.25},      "horizontal_landscape":{"original_ratio":0.25}    }  },  "pad_default": {    "freeform_args": {      "vertical_portrait":{"aspect_ratio":0.5625, "original_ratio":0.375,"original_scale":0.835,"top_margin":0.049,"left_margin":0.2775},      "horizontal_portrait":{"aspect_ratio":0.5625, "original_ratio":0.375,"original_scale":0.835,"top_margin":-1,"left_margin":0.6525},      "vertical_landscape":{"aspect_ratio":-1, "original_ratio":1,"original_scale":0.468,"top_margin":0.049,"left_margin":-1},      "horizontal_landscape":{"aspect_ratio":-1, "original_ratio":1,"original_scale":0.468,"top_margin":-1,"left_margin":0.4976}    },    "mini_freeform_args":{      "vertical_portrait":{"original_ratio":0.144},      "horizontal_portrait":{"original_ratio":0.144},      "vertical_landscape":{"original_ratio":0.2},      "horizontal_landscape":{"original_ratio":0.2}    }  }}
+2025-12-14 01:16:37.962 17602-17602 MiuiMultiWindowUtils    com.example.sigaapp                  D  initFreeFormResolutionArgs failed, device is malachite
+2025-12-14 01:16:39.045 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@5c0630e, reason: AppDarkModeEnable
+2025-12-14 01:16:39.085 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@5c0630e, reason: AppDarkModeEnable
+2025-12-14 01:18:18.888 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@5c0630e, reason: AppDarkModeEnable
+2025-12-14 01:18:18.938 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@5c0630e, reason: AppDarkModeEnable
+2025-12-14 01:18:20.250 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@5c0630e, reason: AppDarkModeEnable
+2025-12-14 01:18:20.296 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@5c0630e, reason: AppDarkModeEnable
+2025-12-14 01:18:42.283 17602-19713 ActivityThread          com.example.sigaapp                  I  HardwareRenderer preload  done
+2025-12-14 01:18:42.342 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@b988202, reason: AppDarkModeEnable
+2025-12-14 01:18:42.355 17602-17602 ActivityThread          com.example.sigaapp                  D  Fail to check app heapsize due to java.lang.NoSuchMethodException: dalvik.system.VMRuntime.getBlockingGcCountForAlloc []
+2025-12-14 01:18:42.495 17602-17602 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+2025-12-14 01:18:45.593 17602-19713 ActivityThread          com.example.sigaapp                  I  HardwareRenderer preload  done
+2025-12-14 01:18:45.640 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@e45d7b6, reason: AppDarkModeEnable
+2025-12-14 01:18:45.648 17602-17602 ActivityThread          com.example.sigaapp                  D  Fail to check app heapsize due to java.lang.NoSuchMethodException: dalvik.system.VMRuntime.getBlockingGcCountForAlloc []
+2025-12-14 01:18:45.835 17602-17602 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+--------- beginning of main
+2025-12-14 01:20:48.141  1830-2246  WindowManager           system_server                        E  setClientVisible ActivityRecord{2708dd2 u0 com.example.sigaapp/.MainActivity t20} false
+2025-12-14 01:20:48.145 17602-17602 VRI[MainActivity]       com.example.sigaapp                  D  visibilityChanged oldVisibility=true newVisibility=false
+2025-12-14 01:20:48.180 17602-17602 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#6](f:0,a:2) destructor()
+2025-12-14 01:20:48.181 17602-17602 BufferQueueConsumer     com.example.sigaapp                  D  [VRI[MainActivity]#6(BLAST Consumer)6](id:44c200000006,api:0,p:-1,c:17602) disconnect
+2025-12-14 01:20:48.183  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:20:48.194 17602-17602 ActivityThread          com.example.sigaapp                  D  Fail to check app heapsize due to java.lang.NoSuchMethodException: dalvik.system.VMRuntime.getBlockingGcCountForAlloc []
+2025-12-14 01:20:48.274  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:22:48.312  1830-2912  WindowManager           system_server                        E  setClientVisible ActivityRecord{2708dd2 u0 com.example.sigaapp/.MainActivity t20} true
+2025-12-14 01:22:48.314 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@e45d7b6, reason: AppDarkModeEnable
+2025-12-14 01:22:48.419  1830-4669  WindowManager           system_server                        E  setClientVisible ActivityRecord{2708dd2 u0 com.example.sigaapp/.MainActivity t20} true
+2025-12-14 01:22:48.534 17602-17602 SecurityManager         com.example.sigaapp                  D  checkAccessControl flag0
+2025-12-14 01:22:48.580 17602-17602 BufferQueueConsumer     com.example.sigaapp                  D  [](id:44c200000007,api:0,p:-1,c:17602) connect: controlledByApp=false
+2025-12-14 01:22:48.581 17602-17602 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#7](f:0,a:0) constructor()
+2025-12-14 01:22:48.581 17602-17602 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#7](f:0,a:0) update width=1220 height=2712 format=-1 mTransformHint=0
+2025-12-14 01:22:48.605  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:22:48.614 17602-17602 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4985 android.view.ViewRootImpl.doTraversal:3572 android.view.ViewRootImpl$TraversalRunnable.run:11792 android.view.Choreographer$CallbackRecord.run:1821 android.view.Choreographer$CallbackRecord.run:1830
+2025-12-14 01:22:48.614 17602-17602 VRI[MainActivity]       com.example.sigaapp                  D  Setup new sync=wmsSync-VRI[MainActivity]#22
+2025-12-14 01:22:48.643 17602-19734 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#7](f:0,a:1) acquireNextBufferLocked size=1220x2712 mFrameNumber=1 applyTransaction=true mTimestamp=3754719148377(auto) mPendingTransactions.size=0 graphicBufferId=75600014344243 transform=0
+2025-12-14 01:22:48.652 17602-17602 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportDrawFinished
+2025-12-14 01:22:49.106  2400-2808  RecentsImpl             com.miui.home                        E  updateFsgInKeyguardLocked: topActivity = ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity}
+2025-12-14 01:22:49.190 17602-17602 HandWritingStubImpl     com.example.sigaapp                  I  refreshLastKeyboardType: 1
+2025-12-14 01:22:49.190 17602-17602 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:22:50.532 17602-17602 HandWritingStubImpl     com.example.sigaapp                  I  refreshLastKeyboardType: 1
+2025-12-14 01:22:50.532 17602-17602 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:22:50.686  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=2
+                                                                                                     mainTaskId=21   userId=0   windowMode=1   baseIntent=Intent { act=android.settings.SETTINGS flag=335544320 cmp=ComponentInfo{com.android.settings/com.android.settings.MiuiSettings} }
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:22:50.744  2400-2892  TaskKeyLruCache         com.miui.home                        E  Unexpected null key or value: TaskKey{id=20, stackId=0, baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.example.sigaapp/.MainActivity }, userId=0, lastActiveTime=4881832, windowingMode=1, isThumbnailBlur=false, isAccessLocked=false, isScreening=false, topActivity=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity}, mHashCode=1519372}, null
+2025-12-14 01:22:50.753  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=2
+                                                                                                     mainTaskId=21   userId=0   windowMode=1   baseIntent=Intent { act=android.settings.SETTINGS flag=335544320 cmp=ComponentInfo{com.android.settings/com.android.settings.MiuiSettings} }
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:22:51.494  1830-3350  WindowManager           system_server                        E  setClientVisible ActivityRecord{2708dd2 u0 com.example.sigaapp/.MainActivity t20} false
+2025-12-14 01:22:51.498 17602-17602 VRI[MainActivity]       com.example.sigaapp                  D  visibilityChanged oldVisibility=true newVisibility=false
+2025-12-14 01:22:51.521  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=2
+                                                                                                     mainTaskId=21   userId=0   windowMode=1   baseIntent=Intent { act=android.settings.SETTINGS flag=335544320 cmp=ComponentInfo{com.android.settings/com.android.settings.MiuiSettings} }
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:22:51.525 17602-17602 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#7](f:0,a:1) destructor()
+2025-12-14 01:22:51.525 17602-17602 BufferQueueConsumer     com.example.sigaapp                  D  [VRI[MainActivity]#7(BLAST Consumer)7](id:44c200000007,api:0,p:-1,c:17602) disconnect
+2025-12-14 01:22:51.857 17602-17602 ActivityThread          com.example.sigaapp                  D  Fail to check app heapsize due to java.lang.NoSuchMethodException: dalvik.system.VMRuntime.getBlockingGcCountForAlloc []
+2025-12-14 01:22:54.017  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=2
+                                                                                                     mainTaskId=21   userId=0   windowMode=1   baseIntent=Intent { act=android.settings.SETTINGS flag=335544320 cmp=ComponentInfo{com.android.settings/com.android.settings.MiuiSettings} }
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:22:57.324  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=2
+                                                                                                     mainTaskId=21   userId=0   windowMode=1   baseIntent=Intent { act=android.settings.SETTINGS flag=335544320 cmp=ComponentInfo{com.android.settings/com.android.settings.MiuiSettings} }
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:23:05.333  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=2
+                                                                                                     mainTaskId=21   userId=0   windowMode=1   baseIntent=Intent { act=android.settings.SETTINGS flag=335544320 cmp=ComponentInfo{com.android.settings/com.android.settings.MiuiSettings} }
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:23:11.372  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=2
+                                                                                                     mainTaskId=21   userId=0   windowMode=1   baseIntent=Intent { act=android.settings.SETTINGS flag=335544320 cmp=ComponentInfo{com.android.settings/com.android.settings.MiuiSettings} }
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:23:13.147  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=2
+                                                                                                     mainTaskId=21   userId=0   windowMode=1   baseIntent=Intent { act=android.settings.SETTINGS flag=335544320 cmp=ComponentInfo{com.android.settings/com.android.settings.MiuiSettings} }
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:23:13.261  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=2
+                                                                                                     mainTaskId=21   userId=0   windowMode=1   baseIntent=Intent { act=android.settings.SETTINGS flag=335544320 cmp=ComponentInfo{com.android.settings/com.android.settings.MiuiSettings} }
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:23:14.041  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=2
+                                                                                                     mainTaskId=21   userId=0   windowMode=1   baseIntent=Intent { act=android.settings.SETTINGS flag=335544320 cmp=ComponentInfo{com.android.settings/com.android.settings.MiuiSettings} }
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:23:14.332  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:23:14.377 17602-19707 example.sigaapp         com.example.sigaapp                  W  ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~tbJJPrFhdRyzAIjfK_aZAA==/com.google.android.tts-e1dKPFpyPjiL7VK8VSLLLg==/base.apk' with 1 weak references
+2025-12-14 01:23:14.378 17602-19707 example.sigaapp         com.example.sigaapp                  W  ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~tbJJPrFhdRyzAIjfK_aZAA==/com.google.android.tts-e1dKPFpyPjiL7VK8VSLLLg==/split_config.arm64_v8a.apk' with 1 weak references
+2025-12-14 01:23:14.378 17602-19707 example.sigaapp         com.example.sigaapp                  W  ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~tbJJPrFhdRyzAIjfK_aZAA==/com.google.android.tts-e1dKPFpyPjiL7VK8VSLLLg==/split_config.es.apk' with 1 weak references
+2025-12-14 01:23:14.378 17602-19707 example.sigaapp         com.example.sigaapp                  W  ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~tbJJPrFhdRyzAIjfK_aZAA==/com.google.android.tts-e1dKPFpyPjiL7VK8VSLLLg==/split_config.xxhdpi.apk' with 1 weak references
+2025-12-14 01:23:14.430  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:23:14.458  1830-1998  WindowManager           system_server                        E  setClientVisible ActivityRecord{2708dd2 u0 com.example.sigaapp/.MainActivity t20} true
+2025-12-14 01:23:14.460 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@e45d7b6, reason: AppDarkModeEnable
+2025-12-14 01:23:14.481  1830-3032  WindowManager           system_server                        E  setClientVisible ActivityRecord{2708dd2 u0 com.example.sigaapp/.MainActivity t20} true
+2025-12-14 01:23:14.502  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:23:14.530 17602-17602 SecurityManager         com.example.sigaapp                  D  checkAccessControl flag0
+2025-12-14 01:23:14.538 17602-17602 BufferQueueConsumer     com.example.sigaapp                  D  [](id:44c200000008,api:0,p:-1,c:17602) connect: controlledByApp=false
+2025-12-14 01:23:14.539 17602-17602 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#8](f:0,a:0) constructor()
+2025-12-14 01:23:14.539 17602-17602 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#8](f:0,a:0) update width=1220 height=2712 format=-1 mTransformHint=0
+2025-12-14 01:23:14.541 17602-17602 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4985 android.view.ViewRootImpl.doTraversal:3572 android.view.ViewRootImpl$TraversalRunnable.run:11792 android.view.Choreographer$CallbackRecord.run:1821 android.view.Choreographer$CallbackRecord.run:1830
+2025-12-14 01:23:14.541 17602-17602 VRI[MainActivity]       com.example.sigaapp                  D  Setup new sync=wmsSync-VRI[MainActivity]#24
+2025-12-14 01:23:14.564  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:23:14.566 17602-19734 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#8](f:0,a:1) acquireNextBufferLocked size=1220x2712 mFrameNumber=1 applyTransaction=true mTimestamp=3780642233994(auto) mPendingTransactions.size=0 graphicBufferId=75600014344253 transform=0
+2025-12-14 01:23:14.568 17602-17602 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportDrawFinished
+2025-12-14 01:23:14.583  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:23:14.588 17602-17602 HandWritingStubImpl     com.example.sigaapp                  I  refreshLastKeyboardType: 1
+2025-12-14 01:23:14.588 17602-17602 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:23:14.591  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:23:15.353  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:23:15.606 17602-17602 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=3781680, downTime=3781680, phoneEventTime=01:23:15.604 } moveCount:0
+2025-12-14 01:23:15.721 17602-17602 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=3781795, downTime=3781680, phoneEventTime=01:23:15.719 } moveCount:0
+2025-12-14 01:23:15.737 17602-19734 libc                    com.example.sigaapp                  W  Access denied finding property "ro.vendor.display.iris_x7.support"
+2025-12-14 01:23:15.737 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@e45d7b6, reason: AppDarkModeEnable
+2025-12-14 01:23:15.737 17602-17602 VRI[Ventana emergente]  com.example.sigaapp                  D  hardware acceleration = true, forceHwAccelerated = false
+2025-12-14 01:23:15.748 17602-17602 InputEventReceiver      com.example.sigaapp                  D  Input log is disabled in InputEventReceiver.
+2025-12-14 01:23:15.755 17602-17602 WindowOnBackDispatcher  com.example.sigaapp                  W  OnBackInvokedCallback is not enabled for the application.
+                                                                                                    Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+2025-12-14 01:23:15.786 17602-17602 BufferQueueConsumer     com.example.sigaapp                  D  [](id:44c200000009,api:0,p:-1,c:17602) connect: controlledByApp=false
+2025-12-14 01:23:15.786 17602-17602 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[Ventana emergente]#9](f:0,a:0) constructor()
+2025-12-14 01:23:15.786 17602-17602 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[Ventana emergente]#9](f:0,a:0) update width=514 height=468 format=-3 mTransformHint=0
+2025-12-14 01:23:15.787 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@e45d7b6, reason: AppDarkModeEnable
+2025-12-14 01:23:15.794 17602-17602 VRI[Ventana emergente]  com.example.sigaapp                  D  vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4985 android.view.ViewRootImpl.doTraversal:3572 android.view.ViewRootImpl$TraversalRunnable.run:11792 android.view.Choreographer$CallbackRecord.run:1821 android.view.Choreographer$CallbackRecord.run:1830
+2025-12-14 01:23:15.794 17602-17602 VRI[Ventana emergente]  com.example.sigaapp                  D  Setup new sync=wmsSync-VRI[Ventana emergente]#26
+2025-12-14 01:23:15.797 17602-19734 HWUI                    com.example.sigaapp                  D  makeCurrent grContext:0xb400007769e99510 reset mTextureAvailable
+2025-12-14 01:23:15.798 17602-19734 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[Ventana emergente]#9](f:0,a:1) acquireNextBufferLocked size=514x468 mFrameNumber=1 applyTransaction=true mTimestamp=3781874312456(auto) mPendingTransactions.size=0 graphicBufferId=75600014344263 transform=0
+2025-12-14 01:23:15.799 17602-17602 VRI[Ventana emergente]  com.example.sigaapp                  D  vri.reportDrawFinished
+2025-12-14 01:23:15.813 17602-17602 VRI[Ventana emergente]  com.example.sigaapp                  D  vri.reportNextDraw android.view.ViewRootImpl.handleResized:2771 android.view.ViewRootImpl.-$$Nest$mhandleResized:0 android.view.ViewRootImpl$W.resized:12943 android.app.servertransaction.WindowStateResizeItem.execute:64 android.app.servertransaction.WindowStateTransactionItem.execute:59
+2025-12-14 01:23:15.816 17602-17602 VRI[Ventana emergente]  com.example.sigaapp                  D  Setup new sync=wmsSync-VRI[Ventana emergente]#28
+2025-12-14 01:23:15.819 17602-17602 VRI[Ventana emergente]  com.example.sigaapp                  D  vri.reportDrawFinished
+2025-12-14 01:23:15.826 17602-17602 HandWritingStubImpl     com.example.sigaapp                  I  refreshLastKeyboardType: 1
+2025-12-14 01:23:15.826 17602-17602 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:23:17.339 17602-17602 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'Ventana emergente', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=3783410, downTime=3783410, phoneEventTime=01:23:17.334 } moveCount:0
+2025-12-14 01:23:17.399 17602-17602 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'Ventana emergente', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=3783473, downTime=3783410, phoneEventTime=01:23:17.396 } moveCount:0
+2025-12-14 01:23:17.434 17602-17602 WindowOnBackDispatcher  com.example.sigaapp                  W  sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda12@778cf54
+2025-12-14 01:23:17.438 17602-17602 View                    com.example.sigaapp                  D  [Warning] assignParent to null: this = androidx.compose.ui.window.PopupLayout{95da9d2 V.E...... ......ID 0,0-410,364 #1020002 android:id/content aid=1073741848}
+2025-12-14 01:23:17.441 17602-19789 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[Ventana emergente]#9](f:0,a:2) destructor()
+2025-12-14 01:23:17.441 17602-19789 BufferQueueConsumer     com.example.sigaapp                  D  [VRI[Ventana emergente]#9(BLAST Consumer)9](id:44c200000009,api:0,p:-1,c:17602) disconnect
+2025-12-14 01:23:17.460 17602-17602 HandWritingStubImpl     com.example.sigaapp                  I  refreshLastKeyboardType: 1
+2025-12-14 01:23:17.460 17602-17602 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:23:17.915 17602-17602 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=3783987, downTime=3783987, phoneEventTime=01:23:17.911 } moveCount:0
+2025-12-14 01:23:17.988 17602-17602 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=3784062, downTime=3783987, phoneEventTime=01:23:17.986 } moveCount:0
+2025-12-14 01:23:18.034 17602-17602 WindowOnBackDispatcher  com.example.sigaapp                  W  OnBackInvokedCallback is not enabled for the application.
+                                                                                                    Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+2025-12-14 01:23:18.857 17602-19747 TextToSpeech            com.example.sigaapp                  I  Disconnected from TTS engine
+2025-12-14 01:23:39.142 17602-17602 WindowOnBackDispatcher  com.example.sigaapp                  W  sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda12@83f7c15
+2025-12-14 01:23:39.148 17602-19734 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#8](f:0,a:2) destructor()
+2025-12-14 01:23:39.148 17602-19734 BufferQueueConsumer     com.example.sigaapp                  D  [VRI[MainActivity]#8(BLAST Consumer)8](id:44c200000008,api:0,p:-1,c:17602) disconnect
+2025-12-14 01:23:39.150 17602-17602 View                    com.example.sigaapp                  D  [Warning] assignParent to null: this = DecorView@83a7cb7[MainActivity]
+2025-12-14 01:23:39.162 17602-19713 ActivityThread          com.example.sigaapp                  I  HardwareRenderer preload  done
+2025-12-14 01:23:39.217 17602-17602 SecurityManager         com.example.sigaapp                  D  checkAccessControl flag0
+2025-12-14 01:23:39.222 17602-19734 libc                    com.example.sigaapp                  W  Access denied finding property "ro.vendor.display.iris_x7.support"
+2025-12-14 01:23:39.223 17602-17602 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@f7d7890, reason: AppDarkModeEnable
+2025-12-14 01:23:39.223 17602-17602 VRI[MainActivity]       com.example.sigaapp                  D  hardware acceleration = true, forceHwAccelerated = false
+2025-12-14 01:23:39.231 17602-17602 InputEventReceiver      com.example.sigaapp                  D  Input log is disabled in InputEventReceiver.
+2025-12-14 01:23:39.234 17602-17602 ActivityThread          com.example.sigaapp                  D  Fail to check app heapsize due to java.lang.NoSuchMethodException: dalvik.system.VMRuntime.getBlockingGcCountForAlloc []
+2025-12-14 01:23:39.241 17602-17602 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+2025-12-14 01:23:39.278 17602-17602 WindowOnBackDispatcher  com.example.sigaapp                  W  OnBackInvokedCallback is not enabled for the application.
+                                                                                                    Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+2025-12-14 01:23:39.345 17602-17602 BufferQueueConsumer     com.example.sigaapp                  D  [](id:44c20000000a,api:0,p:-1,c:17602) connect: controlledByApp=false
+2025-12-14 01:23:39.346 17602-17602 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#10](f:0,a:0) constructor()
+2025-12-14 01:23:39.346 17602-17602 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#10](f:0,a:0) update width=2712 height=1220 format=-1 mTransformHint=4
+2025-12-14 01:23:39.358 17602-17602 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4985 android.view.ViewRootImpl.doTraversal:3572 android.view.ViewRootImpl$TraversalRunnable.run:11792 android.view.Choreographer$CallbackRecord.run:1821 android.view.Choreographer$CallbackRecord.run:1830
+2025-12-14 01:23:39.358 17602-17602 VRI[MainActivity]       com.example.sigaapp                  D  Setup new sync=wmsSync-VRI[MainActivity]#30
+2025-12-14 01:23:39.371 17602-19734 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#10](f:0,a:1) acquireNextBufferLocked size=2712x1220 mFrameNumber=1 applyTransaction=true mTimestamp=3805447205380(auto) mPendingTransactions.size=0 graphicBufferId=75600014344271 transform=7
+2025-12-14 01:23:39.372 17602-17602 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportDrawFinished
+2025-12-14 01:23:39.378 17602-17602 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+2025-12-14 01:23:39.430 17602-17602 HandWritingStubImpl     com.example.sigaapp                  I  refreshLastKeyboardType: 1
+2025-12-14 01:23:39.430 17602-17602 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:25:55.142  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:25:55.225  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:25:55.981  1830-3834  WindowManager           system_server                        E  setClientVisible ActivityRecord{2708dd2 u0 com.example.sigaapp/.MainActivity t20} false
+2025-12-14 01:25:55.982 17602-17602 VRI[MainActivity]       com.example.sigaapp                  D  visibilityChanged oldVisibility=true newVisibility=false
+2025-12-14 01:25:56.009 17602-17602 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#10](f:0,a:1) destructor()
+2025-12-14 01:25:56.010 17602-17602 BufferQueueConsumer     com.example.sigaapp                  D  [VRI[MainActivity]#10(BLAST Consumer)10](id:44c20000000a,api:0,p:-1,c:17602) disconnect
+2025-12-14 01:25:56.143  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:25:56.147 17602-17602 ActivityThread          com.example.sigaapp                  D  Fail to check app heapsize due to java.lang.NoSuchMethodException: dalvik.system.VMRuntime.getBlockingGcCountForAlloc []
+2025-12-14 01:25:56.160  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:27:01.837  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=20   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:27:02.304  3369-3369  MiuiScanManagerV2       com.xiaomi.bluetooth                 E  Uninstalled package name : com.example.sigaapp
+2025-12-14 01:27:02.321  1830-1830  SLM-SRV-SLAAppLib       system_server                        E  initBroadcastReceivercom.example.sigaapp
+2025-12-14 01:27:02.377  8826-25366 PackageUtils            com.miui.guardprovider               E  exception when getPackageInfo : (Explain with AI)
+                                                                                                    android.content.pm.PackageManager$NameNotFoundException: com.example.sigaapp
+                                                                                                    	at android.app.ApplicationPackageManager.getPackageInfoAsUser(ApplicationPackageManager.java:276)
+                                                                                                    	at android.app.ApplicationPackageManager.getPackageInfo(ApplicationPackageManager.java:236)
+                                                                                                    	at android.app.ApplicationPackageManager.getPackageInfo(ApplicationPackageManager.java:230)
+                                                                                                    	at L1.h.d(Unknown Source:6)
+                                                                                                    	at E1.b.b(Unknown Source:13)
+                                                                                                    	at com.miui.guardprovider.manager.SecurityService$a.B0(Unknown Source:15)
+                                                                                                    	at com.miui.guardprovider.manager.SecurityService$a.A0(Unknown Source:0)
+                                                                                                    	at com.miui.guardprovider.manager.a.run(Unknown Source:4)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1154)
+                                                                                                    	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:652)
+                                                                                                    	at java.lang.Thread.run(Thread.java:1563)
+2025-12-14 01:27:02.581  2400-2808  InstallApkReceiver      com.miui.home                        E  uninstall:package:com.example.sigaapp
+2025-12-14 01:27:23.517  1830-4468  BackupManagerService    system_server                        E  Unable to finalize restore of com.example.sigaapp
+2025-12-14 01:27:23.708  2400-2887  Launcher.AllAppsList    com.miui.home                        E  Can't load postion for packageName: com.example.sigaapp activityName: com.example.sigaapp.MainActivity
+2025-12-14 01:27:23.750  1830-1830  SLM-SRV-SLAAppLib       system_server                        E  initBroadcastReceivercom.example.sigaapp
+2025-12-14 01:27:24.134  2400-2808  InstallApkReceiver      com.miui.home                        E  install:package:com.example.sigaapp
+2025-12-14 01:27:26.841  6870-23778 PackageUtil             com.lbe.security.miui                E  getPackageInfoAsUser failed com.example.sigaapp , 999
+2025-12-14 01:27:45.511  2400-2400  PreStartUtils           com.miui.home                        E  preLaunchProcess success infoPackage: com.example.sigaapp
+2025-12-14 01:27:45.517 25888-25888 Zygote                  usap64                               E  process_name_ptr:25888 com.example.sigaapp
+2025-12-14 01:27:45.517 25888-25888 Zygote                  usap64                               E  SetMemoryProtected process_name_ptr:25888 com.example.sigaapp
+---------------------------- PROCESS STARTED (25888) for package com.example.sigaapp ----------------------------
+2025-12-14 01:27:45.610 25888-25888 MiuiMonitorThread       com.example.sigaapp                  D  Shared singleton Thread for stability monitor start
+2025-12-14 01:27:45.635 25888-25888 ActivityThread          com.example.sigaapp                  D  setEmbeddedParam packageName=com.example.sigaapp processName=com.example.sigaapp isEmbedded=false isIsolated=false
+2025-12-14 01:27:46.028 25888-25888 nativeloader            com.example.sigaapp                  D  Configuring clns-7 for other apk /data/app/~~krFPVNtzxRSvEZClfBrq0A==/com.example.sigaapp-AFaXUI8MVCzpVa2FhfTE1g==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~krFPVNtzxRSvEZClfBrq0A==/com.example.sigaapp-AFaXUI8MVCzpVa2FhfTE1g==/lib/arm64:/data/app/~~krFPVNtzxRSvEZClfBrq0A==/com.example.sigaapp-AFaXUI8MVCzpVa2FhfTE1g==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.example.sigaapp
+2025-12-14 01:27:46.036 25888-25888 GraphicsEnvironment     com.example.sigaapp                  V  Currently set values for:
+2025-12-14 01:27:46.036 25888-25888 GraphicsEnvironment     com.example.sigaapp                  V    angle_gl_driver_selection_pkgs=[]
+2025-12-14 01:27:46.036 25888-25888 GraphicsEnvironment     com.example.sigaapp                  V    angle_gl_driver_selection_values=[]
+2025-12-14 01:27:46.036 25888-25888 GraphicsEnvironment     com.example.sigaapp                  V  Global.Settings values are invalid: number of packages: 0, number of values: 0
+2025-12-14 01:27:46.037 25888-25888 GraphicsEnvironment     com.example.sigaapp                  V  App is not on the allowlist for updatable production driver.
+2025-12-14 01:27:46.039 25888-27283 ActivityThread          com.example.sigaapp                  I  TrafficStats init done
+2025-12-14 01:27:46.041 25888-27283 ForceDarkHelperStubImpl com.example.sigaapp                  I  initialize for com.example.sigaapp , ForceDarkAppConfig: null
+2025-12-14 01:27:46.044 25888-27283 nativeloader            com.example.sigaapp                  D  Load libforcedarkimpl.so using system ns (caller=/system_ext/framework/miui-framework.jar): ok
+2025-12-14 01:27:46.044 25888-27283 HWUI                    com.example.sigaapp                  D  JNI_OnLoad success
+2025-12-14 01:27:46.044 25888-27283 MiuiForceDarkConfig     com.example.sigaapp                  I  setConfig density:3.250000, mainRule:0, secondaryRule:0, tertiaryRule:0
+2025-12-14 01:27:46.052 25888-27283 ActivityThread          com.example.sigaapp                  I  Miui Feature Init done
+2025-12-14 01:27:46.074 25888-25888 ActivityThread          com.example.sigaapp                  I  currentPkg not in xmlPackages
+2025-12-14 01:27:46.074 25888-25888 libc                    com.example.sigaapp                  W  Access denied finding property "ro.vendor.perf.scroll_opt"
+2025-12-14 01:27:46.079 25888-25888 nativeloader            com.example.sigaapp                  D  Load libpowerhalwrap_jni.so using system ns (caller=/system_ext/framework/mediatek-framework.jar): ok
+2025-12-14 01:27:46.079 25888-25888 PowerHalWrapper         com.example.sigaapp                  I  PowerHalWrapper.getInstance
+2025-12-14 01:27:46.080 25888-25888 M-ProMotion             com.example.sigaapp                  I  M-ProMotion is disabled
+2025-12-14 01:27:50.756  2400-2400  PreStartUtils           com.miui.home                        E  preLaunchProcess success infoPackage: com.example.sigaapp
+2025-12-14 01:27:50.942  1830-5174  WindowManager           system_server                        E  setClientVisible ActivityRecord{b675d23 u0 com.example.sigaapp/.MainActivity true
+2025-12-14 01:27:50.971  1830-5174  WindowManager           system_server                        E  setClientVisible ActivityRecord{b675d23 u0 com.example.sigaapp/.MainActivity t23} true
+2025-12-14 01:27:50.991  1830-5174  WindowManager           system_server                        E  setClientVisible ActivityRecord{b675d23 u0 com.example.sigaapp/.MainActivity t23} true
+2025-12-14 01:27:51.009 25888-27283 ActivityThread          com.example.sigaapp                  I  HardwareRenderer preload  done
+2025-12-14 01:27:51.019  1830-5174  WindowManager           system_server                        E  setClientVisible ActivityRecord{b675d23 u0 com.example.sigaapp/.MainActivity t23} true
+2025-12-14 01:27:51.021 25888-27754 libc                    com.example.sigaapp                  W  Access denied finding property "vendor.migl.debug"
+2025-12-14 01:27:51.021 25888-27754 libMiGL                 com.example.sigaapp                  I  EnableDR: 0
+2025-12-14 01:27:51.022 25888-27754 libMEOW                 com.example.sigaapp                  D  meow new tls: 0xb400007849eef070
+2025-12-14 01:27:51.022 25888-27754 libMEOW                 com.example.sigaapp                  D  meow reload base cfg path: na
+2025-12-14 01:27:51.022 25888-27754 libMEOW                 com.example.sigaapp                  D  meow reload overlay cfg path: na
+2025-12-14 01:27:51.022 25888-27754 QT                      com.example.sigaapp                  W  qt_process_init() called
+2025-12-14 01:27:51.022 25888-27754 QT                      com.example.sigaapp                  E  [QT]file does not exist
+2025-12-14 01:27:51.022 25888-27754 QT                      com.example.sigaapp                  W  Support!!
+2025-12-14 01:27:51.022 25888-27754 QT                      com.example.sigaapp                  E  [QT]file does not exist
+2025-12-14 01:27:51.023 25888-27754 libMEOW                 com.example.sigaapp                  D  applied 1 plugins for [com.example.sigaapp]:
+2025-12-14 01:27:51.023 25888-27754 libMEOW                 com.example.sigaapp                  D    plugin 1: [libMEOW_gift.so]:
+2025-12-14 01:27:51.104 25888-25888 System.err              com.example.sigaapp                  W  SLF4J(W): No SLF4J providers were found.
+2025-12-14 01:27:51.104 25888-25888 System.err              com.example.sigaapp                  W  SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+2025-12-14 01:27:51.104 25888-25888 System.err              com.example.sigaapp                  W  SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+2025-12-14 01:27:51.166  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=2
+                                                                                                     mainTaskId=23   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+                                                                                                     mainTaskId=22   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.VIEW flag=411041792 cmp=ComponentInfo{com.miui.securitycenter/com.miui.permcenter.install.AdbInstallActivity} }
+2025-12-14 01:27:51.191  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=2
+                                                                                                     mainTaskId=23   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+                                                                                                     mainTaskId=22   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.VIEW flag=411041792 cmp=ComponentInfo{com.miui.securitycenter/com.miui.permcenter.install.AdbInstallActivity} }
+2025-12-14 01:27:51.240 25888-25888 libc                    com.example.sigaapp                  W  Access denied finding property "ro.vendor.df.effect.conflict"
+2025-12-14 01:27:51.243 25888-25888 SecurityManager         com.example.sigaapp                  D  checkAccessControl flag0
+2025-12-14 01:27:51.248 25888-27301 PowerHalWrapper         com.example.sigaapp                  I  PowerHalWrapper.getInstance
+2025-12-14 01:27:51.250 25888-25888 SurfaceFactory          com.example.sigaapp                  I  [static] sSurfaceFactory = com.mediatek.view.impl.SurfaceFactoryImpl@1821cd1
+2025-12-14 01:27:51.264 25888-25888 MI-PreRender            com.example.sigaapp                  E  init cloud whiteList failed
+2025-12-14 01:27:51.268 25888-27754 libc                    com.example.sigaapp                  W  Access denied finding property "ro.vendor.display.iris_x7.support"
+2025-12-14 01:27:51.272 25888-25888 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@649dff8, reason: AppDarkModeEnable
+2025-12-14 01:27:51.272 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  hardware acceleration = true, forceHwAccelerated = false
+2025-12-14 01:27:51.287 25888-25888 InputEventReceiver      com.example.sigaapp                  D  Input log is disabled in InputEventReceiver.
+2025-12-14 01:27:51.293 25888-27787 ProfileInstaller        com.example.sigaapp                  D  Installing profile for com.example.sigaapp
+2025-12-14 01:27:51.513 25888-25888 example.sigaapp         com.example.sigaapp                  I  hiddenapi: Accessing hidden method Landroid/os/SystemProperties;->addChangeCallback(Ljava/lang/Runnable;)V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/compose/ui/platform/AndroidComposeView$Companion; (domain=app, TargetSdkVersion=36) using reflection: allowed
+2025-12-14 01:27:51.889  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=2
+                                                                                                     mainTaskId=23   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+                                                                                                     mainTaskId=22   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.VIEW flag=411041792 cmp=ComponentInfo{com.miui.securitycenter/com.miui.permcenter.install.AdbInstallActivity} }
+2025-12-14 01:27:52.042 25888-25888 BufferQueueConsumer     com.example.sigaapp                  D  [](id:652000000000,api:0,p:-1,c:25888) connect: controlledByApp=false
+2025-12-14 01:27:52.044 25888-25888 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#0](f:0,a:0) constructor()
+2025-12-14 01:27:52.044 25888-25888 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#0](f:0,a:0) update width=2712 height=1220 format=-1 mTransformHint=4
+2025-12-14 01:27:52.050 25888-25888 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@649dff8, reason: AppDarkModeEnable
+2025-12-14 01:27:52.078 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4985 android.view.ViewRootImpl.doTraversal:3572 android.view.ViewRootImpl$TraversalRunnable.run:11792 android.view.Choreographer$CallbackRecord.run:1821 android.view.Choreographer$CallbackRecord.run:1830
+2025-12-14 01:27:52.078 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  Setup new sync=wmsSync-VRI[MainActivity]#0
+2025-12-14 01:27:52.080 25888-25888 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+2025-12-14 01:27:52.123 25888-25888 libc                    com.example.sigaapp                  W  Access denied finding property "ro.vendor.display.iris_x7.support"
+2025-12-14 01:27:52.125 25888-27754 HWUI                    com.example.sigaapp                  D  makeCurrent grContext:0xb400007769e9b190 reset mTextureAvailable
+2025-12-14 01:27:52.128 25888-27754 example.sigaapp         com.example.sigaapp                  D  MiuiProcessManagerServiceStub setSchedFifo
+2025-12-14 01:27:52.128 25888-27754 MiuiProcessManagerImpl  com.example.sigaapp                  I  setSchedFifo pid:25888, mode:3
+2025-12-14 01:27:52.129 25888-27754 MAGT_SYNC_FRAME         com.example.sigaapp                  D  MAGT Sync: MAGT is not supported. Disabling Sync.
+2025-12-14 01:27:52.139 25888-27754 libc                    com.example.sigaapp                  W  Access denied finding property "ro.vendor.display.iris_x7.support"
+2025-12-14 01:27:52.206 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:52.206 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:52.206 25888-27754 GrallocExtra            com.example.sigaapp                  I  gralloc_extra_query:is_SW3D 0
+2025-12-14 01:27:52.207 25888-27754 libc                    com.example.sigaapp                  W  Access denied finding property "ro.vendor.display.iris_x7.support"
+2025-12-14 01:27:52.207 25888-27754 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=2712x1220 mFrameNumber=1 applyTransaction=true mTimestamp=4058282809703(auto) mPendingTransactions.size=0 graphicBufferId=111188113358855 transform=7
+2025-12-14 01:27:52.211 25888-27878 LibMBrainProxy          com.example.sigaapp                  D  Init Paramters
+2025-12-14 01:27:52.214 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportDrawFinished
+2025-12-14 01:27:52.214 25888-25888 NativeTurboSchedManager com.example.sigaapp                  I  Load libmiui_runtime
+2025-12-14 01:27:52.231 25888-25888 Choreographer           com.example.sigaapp                  I  Skipped 107 frames!  The application may be doing too much work on its main thread.
+2025-12-14 01:27:52.231 25888-25888 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+2025-12-14 01:27:52.241 25888-27718 HWUI                    com.example.sigaapp                  I  Davey! duration=932ms; Flags=1, FrameTimelineVsyncId=2059897, IntendedVsync=4057354175086, Vsync=4057362496074, InputEventId=0, HandleInputStart=4057365950857, AnimationStart=4057365953395, PerformTraversalsStart=4057365954011, DrawStart=4058158173703, FrameDeadline=4057374175086, FrameInterval=4057365850549, FrameStartTime=8320988, SyncQueued=4058200458934, SyncStart=4058201745087, IssueDrawCommandsStart=4058205294549, SwapBuffers=4058278242011, FrameCompleted=4058287568087, DequeueBufferDuration=3882384, QueueBufferDuration=715000, GpuCompleted=4058287568087, SwapBuffersCompleted=4058284813395, DisplayPresentTime=0, CommandSubmissionCompleted=4058278242011,
+2025-12-14 01:27:52.255 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:52.256 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:52.259 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportNextDraw android.view.ViewRootImpl.handleResized:2771 android.view.ViewRootImpl.-$$Nest$mhandleResized:0 android.view.ViewRootImpl$W.resized:12943 android.app.servertransaction.WindowStateResizeItem.execute:64 android.app.servertransaction.WindowStateTransactionItem.execute:59
+2025-12-14 01:27:52.266 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  Setup new sync=wmsSync-VRI[MainActivity]#2
+2025-12-14 01:27:52.271 25888-27279 HWUI                    com.example.sigaapp                  I  Davey! duration=927ms; Flags=0, FrameTimelineVsyncId=2060093, IntendedVsync=4057412467789, Vsync=4058303091277, InputEventId=0, HandleInputStart=4058308918549, AnimationStart=4058308920395, PerformTraversalsStart=4058318481934, DrawStart=4058318732164, FrameDeadline=4058314446730, FrameInterval=4058307098626, FrameStartTime=8323584, SyncQueued=4058325122241, SyncStart=4058326047164, IssueDrawCommandsStart=4058326146549, SwapBuffers=4058331352703, FrameCompleted=4058340967472, DequeueBufferDuration=4221308, QueueBufferDuration=318153, GpuCompleted=4058340967472, SwapBuffersCompleted=4058332691164, DisplayPresentTime=0, CommandSubmissionCompleted=4058331352703,
+2025-12-14 01:27:52.273 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportDrawFinished
+2025-12-14 01:27:52.277 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  refreshLastKeyboardType: 1
+2025-12-14 01:27:52.277 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:27:52.325 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:27:52.328 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:52.328 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:52.353  2400-4372  ActivityManagerWrapper  com.miui.home                        E  getRecentTasksForceIncludingTaskIdIfValid: getRecentTasks: size=1
+                                                                                                     mainTaskId=23   userId=0   windowMode=1   baseIntent=Intent { act=android.intent.action.MAIN flag=270532608 cmp=ComponentInfo{com.example.sigaapp/com.example.sigaapp.MainActivity} }
+2025-12-14 01:27:52.449 25888-27273 example.sigaapp         com.example.sigaapp                  I  Compiler allocated 6725KB to compile void android.view.ViewRootImpl.performTraversals()
+2025-12-14 01:27:52.493 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:52.493 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:52.498 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:52.498 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:53.629 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=4059688, downTime=4059688, phoneEventTime=01:27:53.611 } moveCount:0
+2025-12-14 01:27:53.635 25888-25888 MirrorManager           com.example.sigaapp                  W  this model don't Support
+2025-12-14 01:27:53.761 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=4059828, downTime=4059688, phoneEventTime=01:27:53.752 } moveCount:6
+2025-12-14 01:27:53.822 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  refreshLastKeyboardType: 1
+2025-12-14 01:27:53.823 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:27:53.824 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:27:53.825 25888-25888 InsetsController        com.example.sigaapp                  D  show(ime(), fromIme=false)
+2025-12-14 01:27:53.827 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:a9f8bb3f: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false
+2025-12-14 01:27:53.828 25888-25888 MiuiMultiWindowUtils    com.example.sigaapp                  D  freeform resolution args raw data:{  "wide_default":{    "freeform_args": {        "vertical_portrait":{"aspect_ratio":0.626, "original_ratio":0.5643,"original_scale":0.74,"top_margin":0.168,"left_margin":0.484},        "horizontal_portrait":{"aspect_ratio":0.626, "original_ratio":0.5643,"original_scale":0.74,"top_margin":0.1222,"left_margin":0.59745},        "vertical_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.604,"top_margin":0.2596,"left_margin":0.2624},        "horizontal_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.604,"top_margin":0.213,"left_margin":0.3758}    },    "mini_freeform_args":{        "vertical_portrait":{"original_ratio":0.147},        "horizontal_portrait":{"original_ratio":0.147},        "vertical_landscape":{"original_ratio":0.165},        "horizontal_landscape":{"original_ratio":0.165}    }  },  "narrow_default": {    "freeform_args": {        "vertical_portrait":{"aspect_ratio":0.626, "original_ratio":1,"original_scale":0.74,"top_margin":0.0753,"left_margin":-1},        "horizontal_portrait":{"aspect_ratio":0.626, "original_ratio":1,"original_scale":0.5756,"top_margin":-1,"left_margin":0.0753},        "vertical_landscape":{"aspect_ratio":1.6, "original_ratio":0.6847,"original_scale":0.587,"top_margin":0.0753,"left_margin":-1},        "horizontal_landscape":{"aspect_ratio":1.6, "original_ratio":0.6847,"original_scale":0.587,"top_margin":-1,"left_margin":0.0753}    },    "mini_freeform_args":{        "vertical_portrait":{"original_ratio":0.26},        "horizontal_portrait":{"original_ratio":0.26},        "vertical_landscape":{"original_ratio":0.293},        "horizontal_landscape":{"original_ratio":0.293}    }  },  "regular_default": {    "freeform_args": {      "vertical_portrait":{"aspect_ratio":0.625, "original_ratio":1,"original_scale":0.7,"top_margin":0.109,"left_margin":-1},      "horizontal_portrait":{"aspect_ratio":0.6667, "original_ratio":1,"original_scale":0.6102,"top_margin":-1,"left_margin":0.026},      "vertical_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.4244,"top_margin":0.109,"left_margin":-1},      "horizontal_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.4244,"top_margin":-1,"left_margin":0.026}    },    "mini_freeform_args":{      "vertical_portrait":{"original_ratio":0.25},      "horizontal_portrait":{"original_ratio":0.25},      "vertical_landscape":{"original_ratio":0.25},      "horizontal_landscape":{"original_ratio":0.25}    }  },  "pad_default": {    "freeform_args": {      "vertical_portrait":{"aspect_ratio":0.5625, "original_ratio":0.375,"original_scale":0.835,"top_margin":0.049,"left_margin":0.2775},      "horizontal_portrait":{"aspect_ratio":0.5625, "original_ratio":0.375,"original_scale":0.835,"top_margin":-1,"left_margin":0.6525},      "vertical_landscape":{"aspect_ratio":-1, "original_ratio":1,"original_scale":0.468,"top_margin":0.049,"left_margin":-1},      "horizontal_landscape":{"aspect_ratio":-1, "original_ratio":1,"original_scale":0.468,"top_margin":-1,"left_margin":0.4976}    },    "mini_freeform_args":{      "vertical_portrait":{"original_ratio":0.144},      "horizontal_portrait":{"original_ratio":0.144},      "vertical_landscape":{"original_ratio":0.2},      "horizontal_landscape":{"original_ratio":0.2}    }  }}
+2025-12-14 01:27:53.829 25888-25888 MiuiMultiWindowUtils    com.example.sigaapp                  D  initFreeFormResolutionArgs failed, device is malachite
+2025-12-14 01:27:53.829 25888-25888 IS_CTS_MODE             com.example.sigaapp                  D  false
+2025-12-14 01:27:53.829 25888-25888 MULTI_WIND...CH_ENABLED com.example.sigaapp                  D  false
+2025-12-14 01:27:53.833 25888-25888 InputMethodManager      com.example.sigaapp                  D  showSoftInput() view=androidx.compose.ui.platform.AndroidComposeView{d234be9 VFED..... .F....ID 0,0-2712,1220 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT_BY_INSETS_API
+2025-12-14 01:27:53.847 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:53.847 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:53.865 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:53.865 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:53.869 25888-25888 AssistStructure         com.example.sigaapp                  I  Flattened final assist data: 684 bytes, containing 1 windows, 4 views
+2025-12-14 01:27:53.874 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:e1a9f21c: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+2025-12-14 01:27:53.874 25888-25888 InputMethodManager      com.example.sigaapp                  D  showSoftInput() view=androidx.compose.ui.platform.AndroidComposeView{d234be9 VFED..... .F...... 0,0-2712,1220 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+2025-12-14 01:27:53.915 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:53.915 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:53.927 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:53.927 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:53.958 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:53.958 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:53.984 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:53.984 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.011 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.011 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.041 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.041 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.058 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.058 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.150 25888-25888 InsetsController        com.example.sigaapp                  D  show(ime(), fromIme=true)
+2025-12-14 01:27:54.156 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  requestedTypes: 8
+2025-12-14 01:27:54.161 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationStart
+2025-12-14 01:27:54.163 25888-25888 InteractionJankMonitor  com.example.sigaapp                  W  Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.example.sigaapp
+2025-12-14 01:27:54.163 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.0
+2025-12-14 01:27:54.163 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.164 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.168 25888-25888 InsetsController        com.example.sigaapp                  D  show(ime(), fromIme=true)
+2025-12-14 01:27:54.169 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:e1a9f21c: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+2025-12-14 01:27:54.169 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.011822194
+2025-12-14 01:27:54.175 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.175 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.182 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.043695066
+2025-12-14 01:27:54.186 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.186 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.192 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.08924202
+2025-12-14 01:27:54.200 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.200 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.201 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.1435536
+2025-12-14 01:27:54.206 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.206 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.210 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.20288609
+2025-12-14 01:27:54.214 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.214 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.220 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.2644378
+2025-12-14 01:27:54.221 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.221 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.234 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.32613018
+2025-12-14 01:27:54.234 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.234 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.242 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.242 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.250 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.38646096
+2025-12-14 01:27:54.255 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.255 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.257 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.4443847
+2025-12-14 01:27:54.262 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.262 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.264 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.49920568
+2025-12-14 01:27:54.268 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.269 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.270 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.5504999
+2025-12-14 01:27:54.279 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.279 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.281 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.59804225
+2025-12-14 01:27:54.290 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.290 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.290 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.6417584
+2025-12-14 01:27:54.297 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.681689
+2025-12-14 01:27:54.297 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.298 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.307 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.307 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.309 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.7179537
+2025-12-14 01:27:54.314 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.314 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.315 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.7507195
+2025-12-14 01:27:54.320 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.320 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.320 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.78019255
+2025-12-14 01:27:54.325 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.325 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.327 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.80660295
+2025-12-14 01:27:54.331 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.332 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.336 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.83018124
+2025-12-14 01:27:54.339 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.339 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.344 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.85116416
+2025-12-14 01:27:54.348 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.348 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.352 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.8697834
+2025-12-14 01:27:54.356 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.357 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.361 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.886261
+2025-12-14 01:27:54.365 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.365 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.370 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9008081
+2025-12-14 01:27:54.375 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.375 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.378 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9136225
+2025-12-14 01:27:54.384 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.384 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.386 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9248882
+2025-12-14 01:27:54.389 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.389 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.394 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.93477124
+2025-12-14 01:27:54.397 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.397 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.402 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9434256
+2025-12-14 01:27:54.406 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.406 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.411 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9509912
+2025-12-14 01:27:54.414 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.415 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.419 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9575946
+2025-12-14 01:27:54.423 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.423 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.427 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9633491
+2025-12-14 01:27:54.433 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.433 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.436 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9683573
+2025-12-14 01:27:54.441 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.441 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.444 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9727099
+2025-12-14 01:27:54.449 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.449 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.452 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9764875
+2025-12-14 01:27:54.455 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.455 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.461 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.97976226
+2025-12-14 01:27:54.464 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.465 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.469 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9825974
+2025-12-14 01:27:54.474 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.474 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.478 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.98504925
+2025-12-14 01:27:54.483 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.483 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.485 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9871673
+2025-12-14 01:27:54.490 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.490 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.494 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9889951
+2025-12-14 01:27:54.498 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.498 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.502 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99057066
+2025-12-14 01:27:54.507 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.507 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.511 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9919275
+2025-12-14 01:27:54.515 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.515 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.519 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99309486
+2025-12-14 01:27:54.524 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.524 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.527 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9940982
+2025-12-14 01:27:54.532 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.532 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.536 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99495983
+2025-12-14 01:27:54.539 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.539 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.544 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99569917
+2025-12-14 01:27:54.549 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.549 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.552 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99633294
+2025-12-14 01:27:54.556 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.556 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.560 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99687576
+2025-12-14 01:27:54.564 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.564 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.569 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99734026
+2025-12-14 01:27:54.573 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.573 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.577 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9977374
+2025-12-14 01:27:54.582 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.583 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.586 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99807674
+2025-12-14 01:27:54.589 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.589 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.594 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9983664
+2025-12-14 01:27:54.598 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.598 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.603 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9986135
+2025-12-14 01:27:54.608 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.608 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.611 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99882406
+2025-12-14 01:27:54.617 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.617 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.619 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 1.0
+2025-12-14 01:27:54.619 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationEnd,canceled: false
+2025-12-14 01:27:54.620 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:a9f8bb3f: onShown
+2025-12-14 01:27:54.627 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.627 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:54.862 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:54.862 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:55.157 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:55.157 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:55.164 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:55.164 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:55.663 25888-27274 example.sigaapp         com.example.sigaapp                  W  userfaultfd: MOVE ioctl seems unsupported: Try again
+2025-12-14 01:27:55.676 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:55.676 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:55.676 25888-27754 example.sigaapp         com.example.sigaapp                  E  DynamicFPS DF open fail: No such file or directory
+2025-12-14 01:27:55.683 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:55.683 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:56.184 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:56.184 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:56.696 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:56.696 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:56.933 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:56.933 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:56.946 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:56.946 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:57.441 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:57.442 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:57.442 25888-27754 example.sigaapp         com.example.sigaapp                  E  FrameInsert open fail: No such file or directory
+2025-12-14 01:27:57.951 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:57.951 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:58.222 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:58.222 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:58.236 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:58.236 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:58.731 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:58.732 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:59.078 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:59.078 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:59.083 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:59.083 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:27:59.589 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:27:59.589 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:00.093 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:00.093 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:00.589 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:00.589 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:00.954 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:00.955 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:00.935
+2025-12-14 01:28:00.955 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:00.937
+2025-12-14 01:28:00.956 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:00.951
+2025-12-14 01:28:00.956 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:00.937
+2025-12-14 01:28:00.983 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:00.984 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:00.984 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:00.984 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:00.982
+2025-12-14 01:28:00.984 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:00.982
+2025-12-14 01:28:00.984 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:00.983
+2025-12-14 01:28:00.984 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:00.982
+2025-12-14 01:28:00.992 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:00.992 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:00.993 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:00.994 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:00.992
+2025-12-14 01:28:00.994 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:00.992
+2025-12-14 01:28:00.994 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:00.993
+2025-12-14 01:28:00.994 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:00.992
+2025-12-14 01:28:00.995 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:00.995 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:00.994
+2025-12-14 01:28:00.995 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:00.994
+2025-12-14 01:28:00.995 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:00.994
+2025-12-14 01:28:00.995 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:00.994
+2025-12-14 01:28:01.018 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:01.018 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:01.024 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:01.024 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:01.042 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.042 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.040
+2025-12-14 01:28:01.042 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.040
+2025-12-14 01:28:01.042 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.041
+2025-12-14 01:28:01.042 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.040
+2025-12-14 01:28:01.043 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.043 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.043
+2025-12-14 01:28:01.043 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.043
+2025-12-14 01:28:01.043 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.043
+2025-12-14 01:28:01.043 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.043
+2025-12-14 01:28:01.066 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:01.066 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:01.071 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:01.072 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:01.097 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.097 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.095
+2025-12-14 01:28:01.097 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.095
+2025-12-14 01:28:01.097 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.097
+2025-12-14 01:28:01.097 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.095
+2025-12-14 01:28:01.099 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.099 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.098
+2025-12-14 01:28:01.099 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.098
+2025-12-14 01:28:01.099 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.099
+2025-12-14 01:28:01.099 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.098
+2025-12-14 01:28:01.122 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:01.122 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:01.127 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:01.127 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:01.150 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.150 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.148
+2025-12-14 01:28:01.150 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.148
+2025-12-14 01:28:01.151 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.150
+2025-12-14 01:28:01.151 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.148
+2025-12-14 01:28:01.151 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.151 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.151
+2025-12-14 01:28:01.151 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.151
+2025-12-14 01:28:01.151 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.151
+2025-12-14 01:28:01.151 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.151
+2025-12-14 01:28:01.173 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:01.173 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:01.179 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:01.179 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:01.204 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.204 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.203
+2025-12-14 01:28:01.204 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.203
+2025-12-14 01:28:01.204 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.204
+2025-12-14 01:28:01.204 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.203
+2025-12-14 01:28:01.205 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.205 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.204
+2025-12-14 01:28:01.205 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.204
+2025-12-14 01:28:01.205 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.205
+2025-12-14 01:28:01.205 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.204
+2025-12-14 01:28:01.254 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.254 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.253
+2025-12-14 01:28:01.254 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.253
+2025-12-14 01:28:01.254 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.253
+2025-12-14 01:28:01.254 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.253
+2025-12-14 01:28:01.254 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.254 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.254
+2025-12-14 01:28:01.254 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.254
+2025-12-14 01:28:01.254 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.254
+2025-12-14 01:28:01.254 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.254
+2025-12-14 01:28:01.306 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.306 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.305
+2025-12-14 01:28:01.306 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.305
+2025-12-14 01:28:01.306 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.306
+2025-12-14 01:28:01.306 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.305
+2025-12-14 01:28:01.306 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.307 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.306
+2025-12-14 01:28:01.307 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.306
+2025-12-14 01:28:01.307 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.306
+2025-12-14 01:28:01.307 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.306
+2025-12-14 01:28:01.358 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.358 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.357
+2025-12-14 01:28:01.358 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.357
+2025-12-14 01:28:01.358 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.357
+2025-12-14 01:28:01.358 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.357
+2025-12-14 01:28:01.358 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.359 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.358
+2025-12-14 01:28:01.359 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.358
+2025-12-14 01:28:01.359 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.358
+2025-12-14 01:28:01.359 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.358
+2025-12-14 01:28:01.411 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.412 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.410
+2025-12-14 01:28:01.412 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.410
+2025-12-14 01:28:01.412 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.411
+2025-12-14 01:28:01.412 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.410
+2025-12-14 01:28:01.414 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.414 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.413
+2025-12-14 01:28:01.414 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.413
+2025-12-14 01:28:01.414 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.413
+2025-12-14 01:28:01.414 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.413
+2025-12-14 01:28:01.463 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.464 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.462
+2025-12-14 01:28:01.464 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.462
+2025-12-14 01:28:01.464 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.463
+2025-12-14 01:28:01.464 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.462
+2025-12-14 01:28:01.465 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.465 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.464
+2025-12-14 01:28:01.465 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.464
+2025-12-14 01:28:01.465 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.464
+2025-12-14 01:28:01.465 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.464
+2025-12-14 01:28:01.517 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.517 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.516
+2025-12-14 01:28:01.517 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.516
+2025-12-14 01:28:01.517 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.516
+2025-12-14 01:28:01.517 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.516
+2025-12-14 01:28:01.519 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.519 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.518
+2025-12-14 01:28:01.519 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.518
+2025-12-14 01:28:01.519 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.518
+2025-12-14 01:28:01.519 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.518
+2025-12-14 01:28:01.569 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.569 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.568
+2025-12-14 01:28:01.569 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.568
+2025-12-14 01:28:01.569 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.568
+2025-12-14 01:28:01.569 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.568
+2025-12-14 01:28:01.570 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.570 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.570
+2025-12-14 01:28:01.571 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.570
+2025-12-14 01:28:01.571 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.570
+2025-12-14 01:28:01.571 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.570
+2025-12-14 01:28:01.621 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.621 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.620
+2025-12-14 01:28:01.621 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.620
+2025-12-14 01:28:01.621 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.620
+2025-12-14 01:28:01.621 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.620
+2025-12-14 01:28:01.622 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.623 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.622
+2025-12-14 01:28:01.623 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.622
+2025-12-14 01:28:01.623 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.622
+2025-12-14 01:28:01.623 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.622
+2025-12-14 01:28:01.673 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.673 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.672
+2025-12-14 01:28:01.673 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.672
+2025-12-14 01:28:01.673 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.673
+2025-12-14 01:28:01.674 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.672
+2025-12-14 01:28:01.676 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.676 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.675
+2025-12-14 01:28:01.677 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.675
+2025-12-14 01:28:01.677 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.676
+2025-12-14 01:28:01.677 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.675
+2025-12-14 01:28:01.685 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:01.686 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:01.725 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.725 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.724
+2025-12-14 01:28:01.725 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.724
+2025-12-14 01:28:01.725 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.724
+2025-12-14 01:28:01.725 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.724
+2025-12-14 01:28:01.726 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.727 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.726
+2025-12-14 01:28:01.727 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.726
+2025-12-14 01:28:01.727 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.726
+2025-12-14 01:28:01.727 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.726
+2025-12-14 01:28:01.777 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.777 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.776
+2025-12-14 01:28:01.777 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.776
+2025-12-14 01:28:01.777 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.776
+2025-12-14 01:28:01.777 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.776
+2025-12-14 01:28:01.778 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.779 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.777
+2025-12-14 01:28:01.779 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.777
+2025-12-14 01:28:01.779 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.778
+2025-12-14 01:28:01.779 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.777
+2025-12-14 01:28:01.831 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.831 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.829
+2025-12-14 01:28:01.831 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.829
+2025-12-14 01:28:01.831 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.830
+2025-12-14 01:28:01.831 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.829
+2025-12-14 01:28:01.832 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.833 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.831
+2025-12-14 01:28:01.833 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.831
+2025-12-14 01:28:01.833 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.832
+2025-12-14 01:28:01.833 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.831
+2025-12-14 01:28:01.883 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.883 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.882
+2025-12-14 01:28:01.883 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.882
+2025-12-14 01:28:01.883 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.882
+2025-12-14 01:28:01.883 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.882
+2025-12-14 01:28:01.884 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  [ANR Warning]Input routeing takes more than 6000ms since 1969-12-31 21:00:00.000, this = com.mediatek.view.impl.ViewDebugManagerImpl@c0a2ba7
+2025-12-14 01:28:01.884 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$EarlyPostImeInputStage@fe13522 at 2025-12-14 01:28:01.883
+2025-12-14 01:28:01.884 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$NativePostImeInputStage@b602bb3 at 2025-12-14 01:28:01.883
+2025-12-14 01:28:01.885 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$SyntheticInputStage@5ddb0e9 at 2025-12-14 01:28:01.884
+2025-12-14 01:28:01.885 25888-25888 VRI[MainActivity]       com.example.sigaapp                  V  Input event delivered to android.view.ViewRootImpl$ViewPostImeInputStage@4b55570 at 2025-12-14 01:28:01.883
+2025-12-14 01:28:02.191 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:02.191 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:02.685 25888-27754 LB                      com.example.sigaapp                  E  fail to open file: No such file or directory
+2025-12-14 01:28:02.685 25888-27754 LB                      com.example.sigaapp                  E  fail to open node: No such file or directory
+2025-12-14 01:28:04.655 25888-25888 WindowOnBackDispatcher  com.example.sigaapp                  W  sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda12@8a27b3d
+2025-12-14 01:28:04.667 25888-27754 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#0](f:0,a:2) destructor()
+2025-12-14 01:28:04.668 25888-27754 BufferQueueConsumer     com.example.sigaapp                  D  [VRI[MainActivity]#0(BLAST Consumer)0](id:652000000000,api:0,p:-1,c:25888) disconnect
+2025-12-14 01:28:04.671 25888-25888 View                    com.example.sigaapp                  D  [Warning] assignParent to null: this = DecorView@73903a4[MainActivity]
+2025-12-14 01:28:04.697 25888-27283 ActivityThread          com.example.sigaapp                  I  HardwareRenderer preload  done
+2025-12-14 01:28:04.728 25888-25888 SecurityManager         com.example.sigaapp                  D  checkAccessControl flag0
+2025-12-14 01:28:04.740 25888-27754 libc                    com.example.sigaapp                  W  Access denied finding property "ro.vendor.display.iris_x7.support"
+2025-12-14 01:28:04.743 25888-25888 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@b8e8738, reason: AppDarkModeEnable
+2025-12-14 01:28:04.744 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  hardware acceleration = true, forceHwAccelerated = false
+2025-12-14 01:28:04.754 25888-25888 InputEventReceiver      com.example.sigaapp                  D  Input log is disabled in InputEventReceiver.
+2025-12-14 01:28:04.757 25888-25888 ActivityThread          com.example.sigaapp                  D  Fail to check app heapsize due to java.lang.NoSuchMethodException: dalvik.system.VMRuntime.getBlockingGcCountForAlloc []
+2025-12-14 01:28:04.757 25888-25888 RemoteInpu...ectionImpl com.example.sigaapp                  W  requestCursorUpdates on inactive InputConnection
+2025-12-14 01:28:04.773 25888-25888 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+2025-12-14 01:28:04.776 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:3c2e241a: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT fromUser false
+2025-12-14 01:28:04.777 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:3c2e241a: onFailed at PHASE_CLIENT_VIEW_SERVED
+2025-12-14 01:28:04.898 25888-25888 BufferQueueConsumer     com.example.sigaapp                  D  [](id:652000000001,api:0,p:-1,c:25888) connect: controlledByApp=false
+2025-12-14 01:28:04.898 25888-25888 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#1](f:0,a:0) constructor()
+2025-12-14 01:28:04.898 25888-25888 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#1](f:0,a:0) update width=1220 height=2712 format=-1 mTransformHint=0
+2025-12-14 01:28:04.910 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4985 android.view.ViewRootImpl.doTraversal:3572 android.view.ViewRootImpl$TraversalRunnable.run:11792 android.view.Choreographer$CallbackRecord.run:1821 android.view.Choreographer$CallbackRecord.run:1830
+2025-12-14 01:28:04.911 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  Setup new sync=wmsSync-VRI[MainActivity]#4
+2025-12-14 01:28:04.921 25888-27754 HWUI                    com.example.sigaapp                  D  makeCurrent grContext:0xb400007769e9b190 reset mTextureAvailable
+2025-12-14 01:28:04.923 25888-27754 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#1](f:0,a:1) acquireNextBufferLocked size=1220x2712 mFrameNumber=1 applyTransaction=true mTimestamp=4070999201088(auto) mPendingTransactions.size=0 graphicBufferId=111188113358868 transform=0
+2025-12-14 01:28:04.924 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportDrawFinished
+2025-12-14 01:28:04.927 25888-25888 RemoteInpu...ectionImpl com.example.sigaapp                  W  getSurroundingText on inactive InputConnection
+2025-12-14 01:28:04.934 25888-25888 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+2025-12-14 01:28:05.026 25888-25888 RemoteInpu...ectionImpl com.example.sigaapp                  W  requestCursorUpdates on inactive InputConnection
+2025-12-14 01:28:05.125 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  refreshLastKeyboardType: 1
+2025-12-14 01:28:05.125 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:28:05.187 25888-25888 RemoteInpu...ectionImpl com.example.sigaapp                  W  requestCursorUpdates on inactive InputConnection
+2025-12-14 01:28:05.187 25888-25888 InsetsController        com.example.sigaapp                  D  hide(ime(), fromIme=true)
+2025-12-14 01:28:05.188 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:c1f4d71d: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+2025-12-14 01:28:05.188 25888-25888 ImeBackDispatcher       com.example.sigaapp                  E  Ime callback not found. Ignoring unregisterReceivedCallback. callbackId: 13622170
+2025-12-14 01:28:06.013 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=4072085, downTime=4072085, phoneEventTime=01:28:06.009 } moveCount:0
+2025-12-14 01:28:06.140 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=4072204, downTime=4072085, phoneEventTime=01:28:06.128 } moveCount:2
+2025-12-14 01:28:06.170 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  refreshLastKeyboardType: 1
+2025-12-14 01:28:06.170 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:28:06.171 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:28:06.171 25888-25888 InsetsController        com.example.sigaapp                  D  show(ime(), fromIme=false)
+2025-12-14 01:28:06.172 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:4148cd32: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false
+2025-12-14 01:28:06.172 25888-25888 InputMethodManager      com.example.sigaapp                  D  showSoftInput() view=androidx.compose.ui.platform.AndroidComposeView{7e7644e VFED..... .F....ID 0,0-1220,2712 aid=1073741829} flags=0 reason=SHOW_SOFT_INPUT_BY_INSETS_API
+2025-12-14 01:28:06.183 25888-25888 AssistStructure         com.example.sigaapp                  I  Flattened final assist data: 684 bytes, containing 1 windows, 4 views
+2025-12-14 01:28:06.196 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:52422324: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+2025-12-14 01:28:06.197 25888-25888 InputMethodManager      com.example.sigaapp                  D  showSoftInput() view=androidx.compose.ui.platform.AndroidComposeView{7e7644e VFED..... .F...... 0,0-1220,2712 aid=1073741829} flags=0 reason=SHOW_SOFT_INPUT
+2025-12-14 01:28:06.280 25888-25888 InsetsController        com.example.sigaapp                  D  show(ime(), fromIme=true)
+2025-12-14 01:28:06.281 25888-25888 InsetsController        com.example.sigaapp                  D  show(ime(), fromIme=true)
+2025-12-14 01:28:06.281 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:52422324: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+2025-12-14 01:28:06.297 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  requestedTypes: 8
+2025-12-14 01:28:06.323 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationStart
+2025-12-14 01:28:06.323 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.0
+2025-12-14 01:28:06.349 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.011830987
+2025-12-14 01:28:06.362 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.04372267
+2025-12-14 01:28:06.371 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.089295
+2025-12-14 01:28:06.377 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.1436313
+2025-12-14 01:28:06.385 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.20299096
+2025-12-14 01:28:06.395 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.26456052
+2025-12-14 01:28:06.402 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.32626456
+2025-12-14 01:28:06.410 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.38660273
+2025-12-14 01:28:06.418 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.44453502
+2025-12-14 01:28:06.427 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.49936312
+2025-12-14 01:28:06.435 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.55066067
+2025-12-14 01:28:06.443 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.59820086
+2025-12-14 01:28:06.452 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.64191645
+2025-12-14 01:28:06.460 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.68184656
+2025-12-14 01:28:06.469 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.71810657
+2025-12-14 01:28:06.477 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.75086683
+2025-12-14 01:28:06.485 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.78033495
+2025-12-14 01:28:06.494 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.8067366
+2025-12-14 01:28:06.502 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.8303078
+2025-12-14 01:28:06.510 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.8512828
+2025-12-14 01:28:06.518 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.86989284
+2025-12-14 01:28:06.527 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.88636166
+2025-12-14 01:28:06.535 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9009007
+2025-12-14 01:28:06.544 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.91370475
+2025-12-14 01:28:06.552 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.92495793
+2025-12-14 01:28:06.560 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9348304
+2025-12-14 01:28:06.568 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9434756
+2025-12-14 01:28:06.576 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.95103323
+2025-12-14 01:28:06.584 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.95763016
+2025-12-14 01:28:06.593 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9633794
+2025-12-14 01:28:06.603 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.96838206
+2025-12-14 01:28:06.609 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.97273004
+2025-12-14 01:28:06.618 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9765046
+2025-12-14 01:28:06.626 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9797766
+2025-12-14 01:28:06.635 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9826096
+2025-12-14 01:28:06.644 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.98505956
+2025-12-14 01:28:06.651 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.98717594
+2025-12-14 01:28:06.660 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.98900276
+2025-12-14 01:28:06.668 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99057746
+2025-12-14 01:28:06.677 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9919335
+2025-12-14 01:28:06.685 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9931001
+2025-12-14 01:28:06.693 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99410295
+2025-12-14 01:28:06.701 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99496406
+2025-12-14 01:28:06.710 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9957029
+2025-12-14 01:28:06.718 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9963362
+2025-12-14 01:28:06.726 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9968786
+2025-12-14 01:28:06.735 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9973428
+2025-12-14 01:28:06.743 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99773973
+2025-12-14 01:28:06.752 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9980788
+2025-12-14 01:28:06.759 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9983682
+2025-12-14 01:28:06.768 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.998615
+2025-12-14 01:28:06.776 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99882543
+2025-12-14 01:28:06.785 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 1.0
+2025-12-14 01:28:06.786 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationEnd,canceled: false
+2025-12-14 01:28:06.786 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:4148cd32: onShown
+2025-12-14 01:28:08.880 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=4074953, downTime=4074953, phoneEventTime=01:28:08.877 } moveCount:0
+2025-12-14 01:28:08.958 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=4075032, downTime=4074953, phoneEventTime=01:28:08.956 } moveCount:0
+2025-12-14 01:28:09.008 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:28:09.009 25888-25888 InsetsController        com.example.sigaapp                  D  show(ime(), fromIme=false)
+2025-12-14 01:28:09.010 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:f3f37635: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false
+2025-12-14 01:28:09.010 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:f3f37635: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+2025-12-14 01:28:09.036 25888-25888 Autofill Status         com.example.sigaapp                  D  Autofill popup was shown.
+2025-12-14 01:28:09.037 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:9d05535c: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+2025-12-14 01:28:09.037 25888-25888 InputMethodManager      com.example.sigaapp                  D  showSoftInput() view=androidx.compose.ui.platform.AndroidComposeView{7e7644e VFED..... .F...... 0,0-1220,2712 aid=1073741829} flags=0 reason=SHOW_SOFT_INPUT
+2025-12-14 01:28:09.132 25888-25888 InsetsController        com.example.sigaapp                  D  show(ime(), fromIme=true)
+2025-12-14 01:28:09.132 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:a8094bf3: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+2025-12-14 01:28:09.135 25888-25888 InsetsController        com.example.sigaapp                  D  show(ime(), fromIme=true)
+2025-12-14 01:28:09.135 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:9d05535c: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+2025-12-14 01:28:09.878 25888-25888 Autofill Status         com.example.sigaapp                  D  Autofill popup was hidden.
+2025-12-14 01:28:11.387 25888-25888 MIUIInput               com.example.sigaapp                  I  [KeyEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x48, repeatCount=0, eventTime=4077439000000, downTime=4077439000000, deviceId=-1, source=0x101, displayId=0 }, phoneEventTime=01:28:11.363
+2025-12-14 01:28:11.408 25888-25888 MIUIInput               com.example.sigaapp                  I  [KeyEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x48, repeatCount=0, eventTime=4077460000000, downTime=4077439000000, deviceId=-1, source=0x101, displayId=0 }, phoneEventTime=01:28:11.384
+2025-12-14 01:28:11.413 25888-25888 InsetsController        com.example.sigaapp                  D  hide(ime(), fromIme=true)
+2025-12-14 01:28:11.430 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  requestedTypes: 8
+2025-12-14 01:28:11.435 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationStart
+2025-12-14 01:28:11.435 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.0
+2025-12-14 01:28:11.444 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.013344642
+2025-12-14 01:28:11.452 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.04901413
+2025-12-14 01:28:11.461 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.09935287
+2025-12-14 01:28:11.469 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.15861169
+2025-12-14 01:28:11.477 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.22252983
+2025-12-14 01:28:11.485 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.28800127
+2025-12-14 01:28:11.494 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.3528117
+2025-12-14 01:28:11.502 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.4154295
+2025-12-14 01:28:11.510 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.4748425
+2025-12-14 01:28:11.519 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.530428
+2025-12-14 01:28:11.527 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.58185595
+2025-12-14 01:28:11.536 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.6290003
+2025-12-14 01:28:11.544 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.67188805
+2025-12-14 01:28:11.552 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.7106543
+2025-12-14 01:28:11.560 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.7455038
+2025-12-14 01:28:11.569 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.7766844
+2025-12-14 01:28:11.577 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.80446196
+2025-12-14 01:28:11.585 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.82911634
+2025-12-14 01:28:11.594 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.8509279
+2025-12-14 01:28:11.602 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.8701677
+2025-12-14 01:28:11.610 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.8870947
+2025-12-14 01:28:11.619 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.90195084
+2025-12-14 01:28:11.627 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9149617
+2025-12-14 01:28:11.635 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.92633414
+2025-12-14 01:28:11.644 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.93625706
+2025-12-14 01:28:11.652 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.944901
+2025-12-14 01:28:11.660 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.95241946
+2025-12-14 01:28:11.669 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9589502
+2025-12-14 01:28:11.677 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9646157
+2025-12-14 01:28:11.685 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.969524
+2025-12-14 01:28:11.694 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.97377163
+2025-12-14 01:28:11.702 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9774437
+2025-12-14 01:28:11.711 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.980615
+2025-12-14 01:28:11.719 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.98335123
+2025-12-14 01:28:11.727 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.98571
+2025-12-14 01:28:11.735 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.98774177
+2025-12-14 01:28:11.744 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.98949045
+2025-12-14 01:28:11.752 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9909944
+2025-12-14 01:28:11.760 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.992287
+2025-12-14 01:28:11.768 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9933973
+2025-12-14 01:28:11.777 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9943504
+2025-12-14 01:28:11.785 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99516803
+2025-12-14 01:28:11.793 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99586904
+2025-12-14 01:28:11.802 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9964698
+2025-12-14 01:28:11.810 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99698436
+2025-12-14 01:28:11.818 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99742484
+2025-12-14 01:28:11.827 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9978018
+2025-12-14 01:28:11.835 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.99812424
+2025-12-14 01:28:11.843 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9983999
+2025-12-14 01:28:11.852 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9986357
+2025-12-14 01:28:11.860 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 0.9988371
+2025-12-14 01:28:11.869 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationUpdate, value: 1.0
+2025-12-14 01:28:11.869 25888-25888 ViewRootImplStubImpl    com.example.sigaapp                  D  onAnimationEnd,canceled: false
+2025-12-14 01:28:11.870 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:9da6c67f: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_ON_ANIMATION_STATE_CHANGED fromUser false
+2025-12-14 01:28:11.871 25888-25888 ImeTracker              com.example.sigaapp                  I  com.google.android.inputmethod.latin:d63c485e: onHidden
+2025-12-14 01:28:12.653 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=4078726, downTime=4078726, phoneEventTime=01:28:12.650 } moveCount:0
+2025-12-14 01:28:12.763 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=4078837, downTime=4078726, phoneEventTime=01:28:12.761 } moveCount:0
+2025-12-14 01:28:25.281 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=4091355, downTime=4091355, phoneEventTime=01:28:25.279 } moveCount:0
+2025-12-14 01:28:25.378 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=4091451, downTime=4091355, phoneEventTime=01:28:25.375 } moveCount:0
+2025-12-14 01:28:25.508 25888-25888 InsetsController        com.example.sigaapp                  D  hide(ime(), fromIme=false)
+2025-12-14 01:28:25.509 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:12d5ac6: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false
+2025-12-14 01:28:25.509 25888-25888 ImeTracker              com.example.sigaapp                  I  com.example.sigaapp:12d5ac6: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+2025-12-14 01:28:25.509 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
+2025-12-14 01:28:29.003 25888-25888 TextToSpeech            com.example.sigaapp                  I  Sucessfully bound to com.google.android.tts
+2025-12-14 01:28:29.006 25888-25888 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+2025-12-14 01:28:29.025 25888-25888 TextToSpeech            com.example.sigaapp                  W  stop failed: not bound to TTS engine
+2025-12-14 01:28:29.098 25888-27754 libc                    com.example.sigaapp                  W  Access denied finding property "ro.vendor.display.iris_x7.support"
+2025-12-14 01:28:29.525 25888-27279 TextToSpeech            com.example.sigaapp                  I  Connected to TTS engine
+2025-12-14 01:28:29.772 25888-28300 BpBinder                com.example.sigaapp                  W  Slow Binder: BpBinder transact took 242 ms, interface=android.speech.tts.ITextToSpeechService, code=15 oneway=false
+2025-12-14 01:28:29.772 25888-28300 TextToSpeech            com.example.sigaapp                  I  Setting up the connection to TTS engine...
+2025-12-14 01:28:29.849 25888-27276 example.sigaapp         com.example.sigaapp                  W  ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~tbJJPrFhdRyzAIjfK_aZAA==/com.google.android.tts-e1dKPFpyPjiL7VK8VSLLLg==/base.apk' with 1 weak references
+2025-12-14 01:28:29.850 25888-27276 example.sigaapp         com.example.sigaapp                  W  ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~tbJJPrFhdRyzAIjfK_aZAA==/com.google.android.tts-e1dKPFpyPjiL7VK8VSLLLg==/split_config.arm64_v8a.apk' with 1 weak references
+2025-12-14 01:28:29.851 25888-27276 example.sigaapp         com.example.sigaapp                  W  ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~tbJJPrFhdRyzAIjfK_aZAA==/com.google.android.tts-e1dKPFpyPjiL7VK8VSLLLg==/split_config.es.apk' with 1 weak references
+2025-12-14 01:28:29.851 25888-27276 example.sigaapp         com.example.sigaapp                  W  ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~tbJJPrFhdRyzAIjfK_aZAA==/com.google.android.tts-e1dKPFpyPjiL7VK8VSLLLg==/split_config.xxhdpi.apk' with 1 weak references
+2025-12-14 01:28:32.144 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=4098215, downTime=4098215, phoneEventTime=01:28:32.139 } moveCount:0
+2025-12-14 01:28:32.203 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=4098274, downTime=4098215, phoneEventTime=01:28:32.198 } moveCount:2
+2025-12-14 01:28:32.247 25888-25888 WindowOnBackDispatcher  com.example.sigaapp                  W  OnBackInvokedCallback is not enabled for the application.
+                                                                                                    Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+2025-12-14 01:28:33.090 25888-28042 TextToSpeech            com.example.sigaapp                  I  Disconnected from TTS engine
+2025-12-14 01:28:37.004 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=4103076, downTime=4103076, phoneEventTime=01:28:37.000 } moveCount:0
+2025-12-14 01:28:37.089 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=4103160, downTime=4103076, phoneEventTime=01:28:37.084 } moveCount:1
+2025-12-14 01:28:40.690 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=4106763, downTime=4106763, phoneEventTime=01:28:40.687 } moveCount:0
+2025-12-14 01:28:40.780 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=4106854, downTime=4106763, phoneEventTime=01:28:40.777 } moveCount:0
+2025-12-14 01:28:45.979 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=4112051, downTime=4112051, phoneEventTime=01:28:45.975 } moveCount:0
+2025-12-14 01:28:46.097 25888-25888 MIUIInput               com.example.sigaapp                  I  [MotionEvent] ViewRootImpl windowName 'com.example.sigaapp/com.example.sigaapp.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=4112170, downTime=4112051, phoneEventTime=01:28:46.094 } moveCount:0
+2025-12-14 01:28:52.782 25888-25888 WindowOnBackDispatcher  com.example.sigaapp                  W  sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda12@476503d
+2025-12-14 01:28:52.786 25888-27754 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#1](f:0,a:3) destructor()
+2025-12-14 01:28:52.786 25888-27754 BufferQueueConsumer     com.example.sigaapp                  D  [VRI[MainActivity]#1(BLAST Consumer)1](id:652000000001,api:0,p:-1,c:25888) disconnect
+2025-12-14 01:28:52.789 25888-25888 View                    com.example.sigaapp                  D  [Warning] assignParent to null: this = DecorView@632d311[MainActivity]
+2025-12-14 01:28:52.806 25888-27283 ActivityThread          com.example.sigaapp                  I  HardwareRenderer preload  done
+2025-12-14 01:28:52.835 25888-25888 SecurityManager         com.example.sigaapp                  D  checkAccessControl flag0
+2025-12-14 01:28:52.840 25888-27754 libc                    com.example.sigaapp                  W  Access denied finding property "ro.vendor.display.iris_x7.support"
+2025-12-14 01:28:52.841 25888-25888 ForceDarkHelperStubImpl com.example.sigaapp                  I  setViewRootImplForceDark: false for com.example.sigaapp.MainActivity@e2100c2, reason: AppDarkModeEnable
+2025-12-14 01:28:52.841 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  hardware acceleration = true, forceHwAccelerated = false
+2025-12-14 01:28:52.848 25888-25888 InputEventReceiver      com.example.sigaapp                  D  Input log is disabled in InputEventReceiver.
+2025-12-14 01:28:52.849 25888-25888 ActivityThread          com.example.sigaapp                  D  Fail to check app heapsize due to java.lang.NoSuchMethodException: dalvik.system.VMRuntime.getBlockingGcCountForAlloc []
+2025-12-14 01:28:52.850 25888-25888 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+2025-12-14 01:28:52.898 25888-25888 WindowOnBackDispatcher  com.example.sigaapp                  W  OnBackInvokedCallback is not enabled for the application.
+                                                                                                    Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+2025-12-14 01:28:52.997 25888-25888 BufferQueueConsumer     com.example.sigaapp                  D  [](id:652000000002,api:0,p:-1,c:25888) connect: controlledByApp=false
+2025-12-14 01:28:52.998 25888-25888 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#2](f:0,a:0) constructor()
+2025-12-14 01:28:52.998 25888-25888 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#2](f:0,a:0) update width=2712 height=1220 format=-1 mTransformHint=4
+2025-12-14 01:28:53.016 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportNextDraw android.view.ViewRootImpl.performTraversals:4985 android.view.ViewRootImpl.doTraversal:3572 android.view.ViewRootImpl$TraversalRunnable.run:11792 android.view.Choreographer$CallbackRecord.run:1821 android.view.Choreographer$CallbackRecord.run:1830
+2025-12-14 01:28:53.016 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  Setup new sync=wmsSync-VRI[MainActivity]#6
+2025-12-14 01:28:53.028 25888-27754 HWUI                    com.example.sigaapp                  D  makeCurrent grContext:0xb400007769e9b190 reset mTextureAvailable
+2025-12-14 01:28:53.033 25888-27754 BLASTBufferQueue        com.example.sigaapp                  D  [VRI[MainActivity]#2](f:0,a:1) acquireNextBufferLocked size=2712x1220 mFrameNumber=1 applyTransaction=true mTimestamp=4119109203860(auto) mPendingTransactions.size=0 graphicBufferId=111188113358876 transform=7
+2025-12-14 01:28:53.034 25888-25888 VRI[MainActivity]       com.example.sigaapp                  D  vri.reportDrawFinished
+2025-12-14 01:28:53.039 25888-25888 UserSceneDetector       com.example.sigaapp                  D  invoke error.
+2025-12-14 01:28:53.105 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  refreshLastKeyboardType: 1
+2025-12-14 01:28:53.105 25888-25888 HandWritingStubImpl     com.example.sigaapp                  I  getCurrentKeyboardType: 1
