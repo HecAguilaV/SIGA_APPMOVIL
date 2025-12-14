@@ -66,4 +66,6 @@ class SaaSRepository(
         val token = sessionManager.getAccessToken() ?: return Result.failure(Exception("No hay sesión activa"))
         return apiService.updateStock(id, cantidad, token)
     }
+    
+    fun getDefaultLocalId(): Int? = sessionManager.getDefaultLocalId()
 }

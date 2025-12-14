@@ -14,11 +14,14 @@ class AuthRepository(
             val response = result.getOrNull()
             if (response != null && response.success && response.accessToken != null && response.user != null) {
                 // 1. Guardar sesión básica
+                // 1. Guardar sesión básica + Info Empresa/Local
                 sessionManager.saveAuthSession(
                     token = response.accessToken,
                     userId = response.user.id,
                     role = response.user.rol,
-                    nombre = response.user.nombre
+                    nombre = response.user.nombre,
+                    nombreEmpresa = response.user.nombreEmpresa,
+                    defaultLocalId = response.user.localPorDefecto?.id
                 )
 
                 // 2. Obtener y guardar permisos

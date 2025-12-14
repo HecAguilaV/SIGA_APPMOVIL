@@ -23,7 +23,9 @@ data class User(
     val id: Int,
     val email: String,
     val rol: String,
-    val nombre: String? = null
+    val nombre: String? = null,
+    val nombreEmpresa: String? = null,
+    val localPorDefecto: com.example.sigaapp.data.model.Local? = null
 )
 
 @Serializable

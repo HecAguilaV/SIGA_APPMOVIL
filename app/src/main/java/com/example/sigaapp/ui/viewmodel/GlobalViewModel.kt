@@ -29,7 +29,20 @@ class GlobalViewModel(private val repository: SaaSRepository) : ViewModel() {
             _isLoading.value = true
             repository.getLocales().onSuccess {
                 _locales.value = it
-                // Si solo hay un local, seleccionarlo automáticamente
+                
+                // Estrategia de Auto-Selección:
+                // 1. Si hay un "Local por Defecto" (del login), seleccionarlo.
+                // 2. Si no, pero solo hay 1 local en la lista, seleccionarlo.
+                val defaultId = repository.getDefaultLocalId()
+                if (defaultId != null) {
+                    val match = it.find { local -> local.id == defaultId }
+                    if (match != null) {
+                        _selectedLocal.value = match
+                        return@onSuccess
+                    }
+                }
+                
+                // Fallback: Si solo hay 1 local
                 if (it.size == 1) {
                     _selectedLocal.value = it.first()
                 }

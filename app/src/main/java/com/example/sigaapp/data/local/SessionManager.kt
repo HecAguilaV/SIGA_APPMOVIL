@@ -29,6 +29,10 @@ class SessionManager(private val context: Context) {
         // Version control for data migration/wipe
         private const val CURRENT_DATA_VERSION = 2
         private const val KEY_DATA_VERSION = "data_version"
+        
+        // Extended Session Info
+        private const val KEY_COMPANY_NAME = "company_name"
+        private const val KEY_DEFAULT_LOCAL_ID = "default_local_id"
     }
 
     private val prefs: SharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
@@ -51,13 +55,26 @@ class SessionManager(private val context: Context) {
         }
     }
 
-    fun saveAuthSession(token: String, userId: Int, role: String, nombre: String?) {
+    fun saveAuthSession(token: String, userId: Int, role: String, nombre: String?, nombreEmpresa: String?, defaultLocalId: Int?) {
         prefs.edit().apply {
             putString(KEY_ACCESS_TOKEN, token)
             putInt(KEY_USER_ID, userId)
             putString(KEY_USER_ROLE, role)
             putString(KEY_USER_NAME, nombre)
+            putString(KEY_COMPANY_NAME, nombreEmpresa)
+            if (defaultLocalId != null) {
+                putInt(KEY_DEFAULT_LOCAL_ID, defaultLocalId)
+            } else {
+                remove(KEY_DEFAULT_LOCAL_ID)
+            }
         }.apply()
+    }
+    
+    fun getCompanyName(): String? = prefs.getString(KEY_COMPANY_NAME, null)
+    
+    fun getDefaultLocalId(): Int? {
+        val id = prefs.getInt(KEY_DEFAULT_LOCAL_ID, -1)
+        return if (id != -1) id else null
     }
 
     fun savePermissions(permissions: List<String>) {
