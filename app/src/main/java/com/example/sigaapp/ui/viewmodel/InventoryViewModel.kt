@@ -28,7 +28,7 @@ class InventoryViewModel(private val repository: SaaSRepository) : ViewModel() {
     // The exposed stockItems will be the filtered one
     val stockItems: StateFlow<List<StockItem>> = _selectedLocal
         .combine(_rawStockItems) { local, items ->
-            if (local == null) items else items.filter { it.local_id == local.id }
+            if (local == null) items else items.filter { it.local_id == local.id || it.id < 0 }
         }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
@@ -90,6 +90,24 @@ class InventoryViewModel(private val repository: SaaSRepository) : ViewModel() {
                     android.util.Log.e("INVENTORY_DEBUG", "Stock ID ${stockItem.id}: producto_id=${stockItem.producto_id}, producto encontrado: ${producto != null}, precio: ${producto?.precioUnitario}")
                     stockItem.copy(
                         producto = producto
+                    )
+                }.toMutableList()
+
+                // Ensure products without stock entries are still listed in the app
+                val fallbackLocalId = _selectedLocal.value?.id
+                    ?: repository.getDefaultLocalId()
+                    ?: _locales.value.firstOrNull()?.id
+                    ?: -1
+                // Add phantom stock entries so products sin stock también se muestren en la app
+                val stockProductIds = stock.map { it.producto_id }.toSet()
+                products.filter { it.id !in stockProductIds }.forEach { product ->
+                    enrichedStock += com.example.sigaapp.data.model.StockItem(
+                        id = -product.id, // Placeholder ID to avoid clashes con registros reales
+                        producto_id = product.id,
+                        local_id = fallbackLocalId,
+                        cantidad = 0,
+                        min_stock = 0,
+                        producto = product
                     )
                 }
                 

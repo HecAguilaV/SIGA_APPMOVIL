@@ -11,7 +11,15 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.automirrored.filled.ExitToApp
+import androidx.compose.material.icons.automirrored.filled.Send
+import androidx.compose.material.icons.automirrored.filled.TrendingDown
+import androidx.compose.material.icons.automirrored.filled.TrendingUp
+import androidx.compose.material.icons.automirrored.filled.VolumeMute
+import androidx.compose.material.icons.automirrored.filled.VolumeUp
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.*
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -293,7 +301,7 @@ fun DashboardScreen(
             item(span = { GridItemSpan(2) }) {
                 DashboardTile(
                     title = "Ventas",
-                    icon = Icons.Default.TrendingUp,
+                    icon = Icons.AutoMirrored.Filled.TrendingUp,
                     color = AccentTurquoise,
                     enabled = permissions.contains("VENTAS_VER") || permissions.contains("VENTAS_CREAR") || userRole == UserRole.ADMINISTRADOR,
                     size = TileSize.MEDIUM,
@@ -322,7 +330,7 @@ fun DashboardScreen(
             item {
                 DashboardTile(
                     title = "Gastos",
-                    icon = Icons.Default.TrendingDown,
+                    icon = Icons.AutoMirrored.Filled.TrendingDown,
                     color = AlertRed,
                     enabled = permissions.contains("COSTOS_VER") || userRole == UserRole.ADMINISTRADOR,
                     size = TileSize.SMALL,
@@ -365,7 +373,7 @@ fun DashboardScreen(
             item { 
                 DashboardTile(
                     title = "Salir",
-                    icon = Icons.Default.ExitToApp,
+                    icon = Icons.AutoMirrored.Filled.ExitToApp,
                     color = AlertRed,
                     enabled = true,
                     size = TileSize.SMALL,
@@ -440,7 +448,7 @@ fun DashboardScreen(
                                 }
                             ) {
                                 Icon(
-                                    if (isVoiceOutputEnabled) Icons.Default.VolumeUp else Icons.Default.VolumeMute,
+                                    if (isVoiceOutputEnabled) Icons.AutoMirrored.Filled.VolumeUp else Icons.AutoMirrored.Filled.VolumeMute,
                                     contentDescription = if (isVoiceOutputEnabled) "Desactivar voz" else "Activar voz",
                                     tint = if (isVoiceOutputEnabled) AccentCyan else DisabledGray
                                 )
@@ -460,7 +468,7 @@ fun DashboardScreen(
                             }
                         }
                     }
-                    Divider(color = DisabledGray)
+                    HorizontalDivider(color = DisabledGray)
 
                     // Chat messages
                     LazyColumn(
@@ -529,7 +537,7 @@ fun DashboardScreen(
                         }
                     }
 
-                    Divider(color = DisabledGray)
+                    HorizontalDivider(color = DisabledGray)
 
                     // Input field
                     Row(
@@ -601,7 +609,7 @@ fun DashboardScreen(
                                 )
                             } else {
                                 Icon(
-                                    Icons.Default.Send,
+                                    Icons.AutoMirrored.Filled.Send,
                                     contentDescription = "Enviar",
                                     tint = White
                                 )
