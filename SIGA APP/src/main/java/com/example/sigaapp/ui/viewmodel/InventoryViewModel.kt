@@ -111,7 +111,7 @@ class InventoryViewModel(
                 // Add phantom stock entries so products sin stock también se muestren en la app
                 val stockProductIds = stock.map { it.producto_id }.toSet()
                 products.filter { it.id !in stockProductIds }.forEach { product ->
-                    enrichedStock += com.example.sigaapp.data.model.StockItem(
+                    enrichedStock += StockItem(
                         id = -product.id, // Placeholder ID to avoid clashes con registros reales
                         producto_id = product.id,
                         local_id = fallbackLocalId,
@@ -216,12 +216,17 @@ class InventoryViewModel(
         }
     }
 
+    private val _successMessage = MutableStateFlow<String?>(null)
+    val successMessage: StateFlow<String?> = _successMessage
+
     fun deleteProduct(id: Int) {
         viewModelScope.launch {
             _isLoading.value = true
             repository.deleteProduct(id).fold(
                 onSuccess = {
-                    loadInventory()
+                    // Filtrar el producto eliminado de la lista local
+                    _rawStockItems.value = _rawStockItems.value.filterNot { it.producto_id == id }
+                    _successMessage.value = "Producto eliminado correctamente"
                 },
                 onFailure = { e ->
                     _error.value = "Error al eliminar: ${e.message}"
