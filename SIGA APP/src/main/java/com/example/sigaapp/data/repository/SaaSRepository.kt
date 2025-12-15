@@ -4,10 +4,23 @@ import com.example.sigaapp.data.model.StockItem
 import com.example.sigaapp.data.model.Sale
 import com.example.sigaapp.data.network.ApiService
 import com.example.sigaapp.data.local.SessionManager
+import io.ktor.client.*
+import io.ktor.client.engine.android.*
+import io.ktor.client.plugins.contentnegotiation.*
+import io.ktor.client.request.*
+import io.ktor.serialization.kotlinx.json.*
+import kotlinx.serialization.json.Json
+import com.example.sigaapp.data.model.DollarIndicatorResponse
+import io.ktor.client.call.body
 
 class SaaSRepository(
     private val apiService: ApiService,
-    private val sessionManager: SessionManager
+    private val sessionManager: SessionManager,
+    private val indicatorsClient: HttpClient = HttpClient(Android) {
+        install(ContentNegotiation) {
+            json(Json { ignoreUnknownKeys = true })
+        }
+    }
 ) {
     suspend fun getStock(): Result<List<StockItem>> {
         val token = sessionManager.getAccessToken() ?: return Result.failure(Exception("No hay sesión activa"))
@@ -73,4 +86,8 @@ class SaaSRepository(
     }
 
     fun getDefaultLocalId(): Int? = sessionManager.getDefaultLocalId()
+
+    suspend fun fetchDollarIndicator(): DollarIndicatorResponse {
+        return indicatorsClient.get("https://mindicador.cl/api/dolar").body()
+    }
 }

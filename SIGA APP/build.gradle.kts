@@ -22,6 +22,26 @@ android {
     }
     val localApiUrl = localProperties.getProperty("API_URL")
 
+    val keystoreProperties = Properties()
+    val keystorePropertiesFile = rootProject.file("keystore.properties")
+    if (keystorePropertiesFile.exists()) {
+        keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+    }
+
+    signingConfigs {
+        if (keystoreProperties.isNotEmpty()) {
+            create("release") {
+                val storePath = keystoreProperties["storeFile"] as String?
+                if (!storePath.isNullOrBlank()) {
+                    storeFile = rootProject.file(storePath)
+                }
+                storePassword = keystoreProperties["storePassword"] as String?
+                keyAlias = keystoreProperties["keyAlias"] as String?
+                keyPassword = keystoreProperties["keyPassword"] as String?
+            }
+        }
+    }
+
     defaultConfig {
         applicationId = "com.example.sigaapp"
         minSdk = 24
@@ -47,16 +67,17 @@ android {
             }
         }
         release {
-            // Default for release if not in local.properties
             if (localApiUrl == null) {
                 buildConfigField("String", "API_BASE_URL", "\"https://siga-backend-production.up.railway.app\"")
             }
-            
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            if (keystoreProperties.isNotEmpty()) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
     }
     compileOptions {
@@ -71,6 +92,7 @@ android {
         buildConfig = true
     }
 }
+
 
 dependencies {
     implementation(libs.androidx.core.ktx)

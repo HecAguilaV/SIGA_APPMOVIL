@@ -20,4 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "SIGAAPP"
-include(":app")
+include(":SIGA APP")

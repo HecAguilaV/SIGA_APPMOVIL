@@ -3,6 +3,7 @@ package com.example.sigaapp.ui.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.example.sigaapp.data.model.DollarIndicatorResponse
 import com.example.sigaapp.data.model.Local
 import com.example.sigaapp.data.repository.SaaSRepository
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -20,8 +21,12 @@ class GlobalViewModel(private val repository: SaaSRepository) : ViewModel() {
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading
 
+    private val _dollarIndicator = MutableStateFlow(DollarIndicatorUiState(isLoading = true))
+    val dollarIndicator: StateFlow<DollarIndicatorUiState> = _dollarIndicator
+
     init {
         loadLocales()
+        refreshDollarIndicator()
     }
 
     fun loadLocales() {
@@ -59,7 +64,35 @@ class GlobalViewModel(private val repository: SaaSRepository) : ViewModel() {
             repository.saveDefaultLocalId(local.id)
         }
     }
+
+    fun refreshDollarIndicator() {
+        viewModelScope.launch {
+            _dollarIndicator.value = _dollarIndicator.value.copy(isLoading = true, error = null)
+            runCatching { repository.fetchDollarIndicator() }
+                .onSuccess { response ->
+                    val lastValue = response.serie.firstOrNull()
+                    _dollarIndicator.value = DollarIndicatorUiState(
+                        value = lastValue?.valor,
+                        unit = response.unidadMedida ?: "",
+                        date = lastValue?.fecha ?: "",
+                        isLoading = false,
+                        error = null
+                    )
+                }
+                .onFailure { error ->
+                    _dollarIndicator.value = DollarIndicatorUiState(isLoading = false, error = error.message)
+                }
+        }
+    }
 }
+
+data class DollarIndicatorUiState(
+    val value: Double? = null,
+    val unit: String = "",
+    val date: String = "",
+    val isLoading: Boolean = false,
+    val error: String? = null
+)
 
 class GlobalViewModelFactory(private val repository: SaaSRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

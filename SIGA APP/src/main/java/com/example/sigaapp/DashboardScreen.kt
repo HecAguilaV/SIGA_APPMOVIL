@@ -41,9 +41,11 @@ import com.example.sigaapp.service.VoiceService
 import com.example.sigaapp.ui.theme.*
 import com.example.sigaapp.ui.viewmodel.CardSize
 import kotlinx.coroutines.launch
-import androidx.compose.foundation.clickable // Required for clickable modifier
+import androidx.compose.foundation.clickable
+// Required for clickable modifier
 import com.example.sigaapp.data.local.SessionManager
-import java.util.*
+import com.example.sigaapp.ui.viewmodel.DollarIndicatorUiState
+import java.util.Locale
 
 enum class UserRole { ADMINISTRADOR, OPERADOR, CAJERO }
 
@@ -99,6 +101,7 @@ fun DashboardScreen(
     // Global State
     val locales by globalViewModel.locales.collectAsState()
     val selectedLocal by globalViewModel.selectedLocal.collectAsState()
+    val dollarIndicatorState by globalViewModel.dollarIndicator.collectAsState()
     var expandedLocalMenu by remember { mutableStateOf(false) }
     
     // Servicios de voz
@@ -314,6 +317,12 @@ fun DashboardScreen(
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
+            item(span = { GridItemSpan(2) }) {
+                DollarIndicatorCard(
+                    state = dollarIndicatorState,
+                    onRefresh = { globalViewModel.refreshDollarIndicator() }
+                )
+            }
             // Tile principal de Inventario
             item(span = { GridItemSpan(2) }) {
                 DashboardTile(
@@ -416,156 +425,200 @@ fun DashboardScreen(
             }
         }
 
-                if (showBottomSheet) {
-                    ModalBottomSheet(
-                        onDismissRequest = { showBottomSheet = false },
-                        sheetState = sheetState,
-                        containerColor = SurfaceLight,
-                        dragHandle = {
-                            Box(
-                                modifier = Modifier
-                                    .padding(vertical = 12.dp)
-                                    .width(40.dp)
-                                    .height(4.dp)
-                                    .background(color = DisabledGray, shape = RoundedCornerShape(2.dp))
+        if (showBottomSheet) {
+            ModalBottomSheet(
+                onDismissRequest = { showBottomSheet = false },
+                sheetState = sheetState,
+                containerColor = SurfaceLight,
+                dragHandle = {
+                    Box(
+                        modifier = Modifier
+                            .padding(vertical = 12.dp)
+                            .width(40.dp)
+                            .height(4.dp)
+                            .background(color = DisabledGray, shape = RoundedCornerShape(2.dp))
+                    )
+                }
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp)
+                        .heightIn(min = 320.dp, max = 640.dp)
+                ) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Icon(Icons.Default.AutoAwesome, contentDescription = null, tint = AccentCyan)
+                            Spacer(Modifier.width(8.dp))
+                            Text(
+                                text = "Asistente SIGA",
+                                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                                color = PrimaryDark
                             )
                         }
-                    ) {
-                        Column(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(16.dp)
-                                .heightIn(min = 320.dp, max = 640.dp)
-                        ) {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Icon(Icons.Default.AutoAwesome, contentDescription = null, tint = AccentCyan)
-                                    Spacer(Modifier.width(8.dp))
-                                    Text(
-                                        text = "Asistente SIGA",
-                                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                                        color = PrimaryDark
-                                    )
-                                }
-                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                    IconButton(onClick = {
-                                        isVoiceOutputEnabled = !isVoiceOutputEnabled
-                                        if (!isVoiceOutputEnabled) VoiceService.stopSpeaking(tts)
-                                    }) {
-                                        Icon(
-                                            if (isVoiceOutputEnabled) Icons.AutoMirrored.Filled.VolumeUp else Icons.AutoMirrored.Filled.VolumeMute,
-                                            contentDescription = if (isVoiceOutputEnabled) "Desactivar voz" else "Activar voz",
-                                            tint = if (isVoiceOutputEnabled) AccentCyan else DisabledGray
-                                        )
-                                    }
-                                    IconButton(onClick = { isVoiceInputEnabled = !isVoiceInputEnabled }) {
-                                        Icon(
-                                            imageVector = if (isVoiceInputEnabled) Icons.Default.Stop else Icons.Default.RecordVoiceOver,
-                                            contentDescription = if (isVoiceInputEnabled) "Desactivar micrófono" else "Activar micrófono",
-                                            tint = if (isVoiceInputEnabled) AccentCyan else DisabledGray
-                                        )
-                                    }
-                                    IconButton(onClick = { showBottomSheet = false }) {
-                                        Icon(Icons.Default.Close, contentDescription = "Cerrar")
-                                    }
-                                }
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            IconButton(onClick = {
+                                isVoiceOutputEnabled = !isVoiceOutputEnabled
+                                if (!isVoiceOutputEnabled) VoiceService.stopSpeaking(tts)
+                            }) {
+                                Icon(
+                                    if (isVoiceOutputEnabled) Icons.AutoMirrored.Filled.VolumeUp else Icons.AutoMirrored.Filled.VolumeMute,
+                                    contentDescription = if (isVoiceOutputEnabled) "Desactivar voz" else "Activar voz",
+                                    tint = if (isVoiceOutputEnabled) AccentCyan else DisabledGray
+                                )
                             }
-                            HorizontalDivider(color = DisabledGray)
+                            IconButton(onClick = { isVoiceInputEnabled = !isVoiceInputEnabled }) {
+                                Icon(
+                                    imageVector = if (isVoiceInputEnabled) Icons.Default.Stop else Icons.Default.RecordVoiceOver,
+                                    contentDescription = if (isVoiceInputEnabled) "Desactivar micrófono" else "Activar micrófono",
+                                    tint = if (isVoiceInputEnabled) AccentCyan else DisabledGray
+                                )
+                            }
+                            IconButton(onClick = { showBottomSheet = false }) {
+                                Icon(Icons.Default.Close, contentDescription = "Cerrar")
+                            }
+                        }
+                    }
+                    HorizontalDivider(color = DisabledGray)
 
-                            LazyColumn(
-                                state = listState,
-                                modifier = Modifier
-                                    .weight(1f)
-                                    .fillMaxWidth()
-                                    .padding(vertical = 12.dp),
-                                verticalArrangement = Arrangement.spacedBy(12.dp)
-                            ) {
-                                items(chatMessages) { ChatBubble(message = it) }
-                                if (isLoading) {
-                                    item {
-                                        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Start) {
-                                            Card(colors = CardDefaults.cardColors(containerColor = Background), shape = RoundedCornerShape(16.dp)) {
-                                                Row(
-                                                    modifier = Modifier.padding(12.dp),
-                                                    verticalAlignment = Alignment.CenterVertically,
-                                                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                                                ) {
-                                                    CircularProgressIndicator(modifier = Modifier.size(16.dp), strokeWidth = 2.dp, color = AccentCyan)
-                                                    Text("Pensando...", color = TextSecondary)
-                                                }
-                                            }
+                    LazyColumn(
+                        state = listState,
+                        modifier = Modifier
+                            .weight(1f)
+                            .fillMaxWidth()
+                            .padding(vertical = 12.dp),
+                        verticalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        items(chatMessages) { ChatBubble(message = it) }
+                        if (isLoading) {
+                            item {
+                                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Start) {
+                                    Card(colors = CardDefaults.cardColors(containerColor = Background), shape = RoundedCornerShape(16.dp)) {
+                                        Row(
+                                            modifier = Modifier.padding(12.dp),
+                                            verticalAlignment = Alignment.CenterVertically,
+                                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                        ) {
+                                            CircularProgressIndicator(modifier = Modifier.size(16.dp), strokeWidth = 2.dp, color = AccentCyan)
+                                            Text("Pensando...", color = TextSecondary)
                                         }
                                     }
                                 }
                             }
+                        }
+                    }
 
-                            errorMessage?.let { error ->
-                                Card(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.errorContainer),
-                                    shape = RoundedCornerShape(8.dp)
-                                ) {
-                                    Text(error, modifier = Modifier.padding(12.dp), color = MaterialTheme.colorScheme.onErrorContainer)
-                                }
-                            }
+                    errorMessage?.let { error ->
+                        Card(
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.errorContainer),
+                            shape = RoundedCornerShape(8.dp)
+                        ) {
+                            Text(error, modifier = Modifier.padding(12.dp), color = MaterialTheme.colorScheme.onErrorContainer)
+                        }
+                    }
 
-                            Row(
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 8.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        if (isVoiceInputEnabled) {
+                            IconButton(
+                                onClick = { startVoiceInput() },
+                                enabled = !isLoading,
                                 modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(top = 8.dp),
-                                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                                verticalAlignment = Alignment.CenterVertically
+                                    .size(48.dp)
+                                    .background(color = AccentCyan, shape = RoundedCornerShape(50))
                             ) {
-                                if (isVoiceInputEnabled) {
-                                    IconButton(
-                                        onClick = { startVoiceInput() },
-                                        enabled = !isLoading,
-                                        modifier = Modifier
-                                            .size(48.dp)
-                                            .background(color = AccentCyan, shape = RoundedCornerShape(50))
-                                    ) {
-                                        Icon(Icons.Default.Mic, contentDescription = "Hablar", tint = White)
-                                    }
-                                }
-                                OutlinedTextField(
-                                    value = userInput,
-                                    onValueChange = { userInput = it },
-                                    modifier = Modifier.weight(1f),
-                                    placeholder = { Text(if (isVoiceInputEnabled) "Toca el micrófono o escribe..." else "Escribe tu mensaje...") },
-                                    enabled = !isLoading,
-                                    maxLines = 3,
-                                    shape = RoundedCornerShape(24.dp),
-                                    colors = OutlinedTextFieldDefaults.colors(
-                                        focusedBorderColor = AccentCyan,
-                                        unfocusedBorderColor = DisabledGray
-                                    ),
-                                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Send),
-                                    keyboardActions = KeyboardActions(onSend = { sendMessage() })
+                                Icon(Icons.Default.Mic, contentDescription = "Hablar", tint = White)
+                            }
+                        }
+                        OutlinedTextField(
+                            value = userInput,
+                            onValueChange = { userInput = it },
+                            modifier = Modifier.weight(1f),
+                            placeholder = { Text(if (isVoiceInputEnabled) "Toca el micrófono o escribe..." else "Escribe tu mensaje...") },
+                            enabled = !isLoading,
+                            maxLines = 3,
+                            shape = RoundedCornerShape(24.dp),
+                            colors = OutlinedTextFieldDefaults.colors(
+                                focusedBorderColor = AccentCyan,
+                                unfocusedBorderColor = DisabledGray
+                            ),
+                            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Send),
+                            keyboardActions = KeyboardActions(onSend = { sendMessage() })
+                        )
+                        IconButton(
+                            onClick = { sendMessage() },
+                            enabled = userInput.isNotBlank() && !isLoading,
+                            modifier = Modifier
+                                .size(48.dp)
+                                .background(
+                                    color = if (userInput.isNotBlank() && !isLoading) AccentCyan else DisabledGray,
+                                    shape = RoundedCornerShape(50)
                                 )
-                                IconButton(
-                                    onClick = { sendMessage() },
-                                    enabled = userInput.isNotBlank() && !isLoading,
-                                    modifier = Modifier
-                                        .size(48.dp)
-                                        .background(
-                                            color = if (userInput.isNotBlank() && !isLoading) AccentCyan else DisabledGray,
-                                            shape = RoundedCornerShape(50)
-                                        )
-                                ) {
-                                    if (isLoading) {
-                                        CircularProgressIndicator(modifier = Modifier.size(24.dp), color = White, strokeWidth = 2.dp)
-                                    } else {
-                                        Icon(Icons.AutoMirrored.Filled.Send, contentDescription = "Enviar", tint = White)
-                                    }
-                                }
+                        ) {
+                            if (isLoading) {
+                                CircularProgressIndicator(modifier = Modifier.size(24.dp), color = White, strokeWidth = 2.dp)
+                            } else {
+                                Icon(Icons.AutoMirrored.Filled.Send, contentDescription = "Enviar", tint = White)
                             }
                         }
                     }
                 }
             }
         }
+    }
+}
 
+@Composable
+private fun DollarIndicatorCard(state: DollarIndicatorUiState, onRefresh: () -> Unit) {
+    Card(
+        colors = CardDefaults.cardColors(containerColor = SurfaceLight),
+        shape = RoundedCornerShape(16.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = "Dólar Observado",
+                    style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                    color = TextPrimary
+                )
+                when {
+                    state.isLoading -> Text("Actualizando...", color = TextSecondary)
+                    state.error != null -> Text("Sin conexión a indicador", color = AlertRed, style = MaterialTheme.typography.bodySmall)
+                    state.value != null -> {
+                        Text(
+                            text = "${"$"}${String.format(Locale("es", "CL"), "%,.2f", state.value)} ${state.unit}",
+                            style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold),
+                            color = AccentCyan
+                        )
+                        Text(
+                            text = state.date.substringBefore("T"),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = TextSecondary
+                        )
+                    }
+                    else -> Text("Sin datos disponibles", color = TextSecondary)
+                }
+            }
+            IconButton(onClick = onRefresh) {
+                Icon(Icons.Default.Refresh, contentDescription = "Refrescar indicador", tint = AccentCyan)
+            }
+        }
+    }
+}

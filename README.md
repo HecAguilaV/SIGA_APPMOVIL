@@ -4,6 +4,17 @@ Aplicación Android oficial del ecosistema SIGA. Esta versión corresponde a la 
 
 ---
 
+## 0. Información general
+| Elemento                  | Descripción                                         |
+|---------------------------|-----------------------------------------------------|
+| Nombre de la app          | SIGA Mobile App                                     |
+| Integrantes               | Héctor Aguila V. – Rol: Fullstack / Mobile          |
+| Repositorio backend       | https://github.com/HecAguilaV/SIGA_BACKEND.git      |
+| Repositorio web comercial | https://github.com/HecAguilaV/SIGA-WEBCOMERCIAL.git |
+| Repositorio app web       | https://github.com/HecAguilaV/SIGA_APPWEB.git       |
+
+---
+
 ## 1. Resumen ejecutivo
 - **Estado**: MVP operativo (inventario y stock en línea).
 - **Integraciones activas**:
@@ -11,12 +22,13 @@ Aplicación Android oficial del ecosistema SIGA. Esta versión corresponde a la 
   - Web App SaaS: https://siga-appweb.vercel.app/
   - Backend Kotlin + PostgreSQL en Railway: https://siga-backend-production.up.railway.app
   - Base de datos en AlwaysData (PostgreSQL) dividida en dos esquemas: uno para la web comercial y otro dedicado al SaaS (app móvil + web app).
+  - **API externa**: https://mindicador.cl/api/dolar (indicador financiero diario consumido vía Ktor).
 - **Rol principal**: Administradores pueden revisar locales, productos y stock actualizados desde la app o la Web App con la misma API.
 
 ## 1.1 Arquitectura del ecosistema
 ```
 ┌─────────────────────────────────────────────────────────┐
-│  WEB COMERCIAL (Portal de Suscripciones)               │
+│  WEB COMERCIAL (Portal de Suscripciones)                │
 │  - Registro de clientes                                 │
 │  - Adquisición de suscripciones                         │
 │  - Botón "Acceder a WebApp" (SSO)                       │
@@ -27,20 +39,20 @@ Aplicación Android oficial del ecosistema SIGA. Esta versión corresponde a la 
                         │ SSO (Token Exchange)
                         ▼
 ┌─────────────────────────────────────────────────────────┐
-│  WEBAPP (Sistema Operativo - CORAZÓN DEL SISTEMA)      │
-│  ✓ Gestión completa del negocio                        │
-│  ✓ Creación y gestión de usuarios operativos           │
-│  ✓ Asignación de permisos según confianza              │
-│  ✓ Asistente IA para operaciones diarias               │
-│  ✓ Reportes y análisis                                 │
-│  ✓ Toma de decisiones de negocio                       │
-│  ✓ Gestión de inventario, stock, ventas                │
+│  WEBAPP (Sistema Operativo - CORAZÓN DEL SISTEMA)       │
+│  ✓ Gestión completa del negocio                         │
+│  ✓ Creación y gestión de usuarios operativos            │
+│  ✓ Asignación de permisos según confianza               │
+│  ✓ Asistente IA para operaciones diarias                │
+│  ✓ Reportes y análisis                                  │
+│  ✓ Toma de decisiones de negocio                        │
+│  ✓ Gestión de inventario, stock, ventas                 │
 └─────────────────────────────────────────────────────────┘
                         │
                         │ Misma autenticación
                         ▼
 ┌─────────────────────────────────────────────────────────┐
-│  APP MÓVIL (Extensión Móvil)                           │
+│  APP MÓVIL (Extensión Móvil)                            │
 │  - Acceso móvil al sistema                              │
 │  - Mismas funcionalidades que WebApp                    │
 │  - Respeta permisos del usuario                         │
@@ -50,7 +62,17 @@ Aplicación Android oficial del ecosistema SIGA. Esta versión corresponde a la 
 
 ---
 
-## 2. Requisitos
+## 2. Funcionalidades principales
+1. Autenticación y persistencia de sesión (DataStore).
+2. Navegación dashboard → inventario con selección de local.
+3. CRUD de productos y categorías con validaciones y feedback háptico.
+4. Sincronización en línea contra backend SaaS (stock y precios en tiempo real).
+5. Reportes rápidos (alerta de stock bajo, totales) y permisos por rol.
+6. Asistente TTS (infraestructura lista) y futuras integraciones: biometría + notificaciones.
+
+---
+
+## 3. Requisitos
 | Componente | Versión recomendada |
 | ---------- | ------------------- |
 | Android Studio | Ladybug o superior |
@@ -61,7 +83,7 @@ Aplicación Android oficial del ecosistema SIGA. Esta versión corresponde a la 
 
 ---
 
-## 3. Configuración rápida
+## 4. Configuración y ejecución
 ```bash
 # Clonar
 git clone https://github.com/HecAguilaV/SIGA_APP.git
@@ -81,7 +103,7 @@ En Android Studio basta con abrir la carpeta `DevAppMobile`, esperar el sincroni
 
 ---
 
-## 4. Credenciales de prueba
+## 5. Credenciales de prueba
 | Usuario | Rol | Contraseña |
 | ------- | --- | ---------- |
 | `admin@test.cl` | Administrador | `test123` |
@@ -90,7 +112,7 @@ En Android Studio basta con abrir la carpeta `DevAppMobile`, esperar el sincroni
 
 ---
 
-## 5. Endpoints consumidos
+## 6. Endpoints consumidos (API propia)
 Base URL: `https://siga-backend-production.up.railway.app`
 
 | Servicio | Método | Ruta | Uso en la app |
@@ -106,7 +128,7 @@ Los datos de ambos clientes (web y móvil) se sirven desde el mismo backend y re
 
 ---
 
-## 6. Ejecución de pruebas
+## 7. Ejecución de pruebas
 ```bash
 ./gradlew test
 ```
@@ -115,7 +137,7 @@ Los datos de ambos clientes (web y móvil) se sirven desde el mismo backend y re
 
 ---
 
-## 7. Firma y distribución
+## 8. Firma y distribución
 1. Genera un keystore (`keytool -genkeypair ...`).
 2. Crea `keystore.properties` (mantener fuera del control de versiones).
 3. Configura `build.gradle.kts` para leer esas propiedades.
@@ -123,13 +145,15 @@ Los datos de ambos clientes (web y móvil) se sirven desde el mismo backend y re
    ```bash
    ./gradlew assembleRelease
    ```
-5. El APK firmado se genera en `app/build/outputs/apk/release/`.
+5. El APK firmado se genera como `app-release.apk` en `app/build/outputs/apk/release/` (nombre por defecto de Gradle).
+6. Guarda el `.jks` en un lugar seguro (`/keystore/siga-release.jks` recomendado pero fuera del repo) y documenta la ruta real en la entrega.
+7. Incluye este APK firmado en la carpeta de entregables indicada por la cátedra.
 
 Entrega el APK junto con su hash SHA-256 y las credenciales anteriores para evaluación.
 
 ---
 
-## 8. Roadmap inmediato
+## 9. Roadmap inmediato
 | Iteración | Objetivo |
 | --------- | -------- |
 | 1 (actual) | Inventario en línea con CRUD básico y sesiones persistentes. |
@@ -138,7 +162,7 @@ Entrega el APK junto con su hash SHA-256 y las credenciales anteriores para eval
 
 ---
 
-## 9. Stack técnico de la app
+## 10. Stack técnico de la app
 - **Lenguaje**: Kotlin
 - **UI**: Jetpack Compose, Material 3
 - **DI**: Hilt
@@ -149,10 +173,22 @@ Entrega el APK junto con su hash SHA-256 y las credenciales anteriores para eval
 
 ---
 
-## 10. Contribuciones
+## 11. Evidencia de colaboración
+`git shortlog -sn`
+```
+39  Héctor Aguila
+12  HecAguilaV
+1   Hec Aguila
+```
+Cada commit incluye mensajes claros (en español) y se coordina con la Web App/Backend.
+
+---
+
+## 12. Contribuciones
 1. Crea un branch `feature/<tarea>`.
 2. Agrega pruebas y actualiza README si la funcionalidad lo requiere.
 3. Ejecuta `./gradlew test` antes del PR.
-4. Describe claramente los cambios y el impacto en backend/web.
 
-Para dudas sobre el backend o la web app, coordina con el equipo principal; todas las capas están desplegadas y sincronizadas.
+---
+>Héctor Aguila
+>>Un Soñador con Poca Ram
