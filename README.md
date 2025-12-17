@@ -35,18 +35,18 @@ Aplicación Android oficial del ecosistema SIGA. Esta versión corresponde a la 
 │  - NO gestiona usuarios operativos                      │
 │  - NO toma decisiones de negocio                        │
 └─────────────────────────────────────────────────────────┘
-                        ��
+                        |
                         │ SSO (Token Exchange)
                         ▼
 ┌─────────────────────────────────────────────────────────┐
 │  WEBAPP (Sistema Operativo - CORAZÓN DEL SISTEMA)       │
-│  ✓ Gestión completa del negocio                         │
-│  ✓ Creación y gestión de usuarios operativos            │
-│  ✓ Asignación de permisos según confianza               │
-│  ✓ Asistente IA para operaciones diarias                │
-│  ✓ Reportes y análisis                                  │
-│  ✓ Toma de decisiones de negocio                        │
-│  ✓ Gestión de inventario, stock, ventas                 │
+│  - Gestión completa del negocio                         │
+│  - Creación y gestión de usuarios operativos            │
+│  - Asignación de permisos según confianza               │
+│  - Asistente IA para operaciones diarias                │
+│  - Reportes y análisis                                  │
+│  - Toma de decisiones de negocio                        │
+│  - Gestión de inventario, stock, ventas                 │
 └─────────────────────────────────────────────────────────┘
                         │
                         │ Misma autenticación
@@ -64,7 +64,7 @@ Aplicación Android oficial del ecosistema SIGA. Esta versión corresponde a la 
 
 ## 2. Funcionalidades principales
 1. Autenticación y persistencia de sesión (DataStore).
-2. Navegación dashboard → inventario con selección de local.
+2. Navegación dashboard > inventario con selección de local.
 3. CRUD de productos y categorías con validaciones y feedback háptico.
 4. Sincronización en línea contra backend SaaS (stock y precios en tiempo real).
 5. Reportes rápidos (alerta de stock bajo, totales) y permisos por rol.
@@ -190,5 +190,8 @@ Cada commit incluye mensajes claros (en español) y se coordina con la Web App/B
 3. Ejecuta `./gradlew test` antes del PR.
 
 ---
->Héctor Aguila
->>Un Soñador con Poca Ram
+
+## Autor
+
+> **Héctor Aguila**  
+>> Un Soñador con Poca RAM 
