@@ -59,7 +59,7 @@ fun InventoryScreen(
     val userRole = remember { sessionManager.getUserRole() }
     val permissions = remember { sessionManager.getPermissions() }
     val canCreateProduct = remember(userRole, permissions) {
-        userRole == "ADMINISTRADOR" || (userRole == "OPERADOR" && permissions.contains("PRODUCTOS_CREATE"))
+        userRole == "ADMINISTRADOR" || userRole == "OPERADOR" || permissions.contains("PRODUCTOS_CREATE")
     }
     val canDeleteProduct = remember(userRole, permissions) {
         userRole == "ADMINISTRADOR" || permissions.contains("PRODUCTOS_ELIMINAR")
@@ -612,7 +612,8 @@ fun InventoryScreen(
                                                     onClick = {
                                                         editingStockItem = item
                                                         newProductName = itemNombre
-                                                        newProductPrice = item.producto?.precioUnitario ?: ""
+                                                        // Fix: Take only integer part for editing to avoid validation error
+                                                        newProductPrice = item.producto?.precioUnitario?.substringBefore(".") ?: ""
                                                         newProductDesc = itemDesc
                                                         newProductStock = item.cantidad.toString()
                                                         showAddDialog = true

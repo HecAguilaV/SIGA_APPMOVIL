@@ -329,7 +329,7 @@ fun DashboardScreen(
                     title = "Inventario",
                     icon = Icons.Default.Inventory,
                     color = AccentCyan,
-                    enabled = permissions.contains("PRODUCTOS_VER") || effectiveUserRole == UserRole.ADMINISTRADOR,
+                    enabled = permissions.contains("PRODUCTOS_VER") || effectiveUserRole == UserRole.ADMINISTRADOR || effectiveUserRole == UserRole.OPERADOR,
                     size = TileSize.LARGE,
                     cardSizePreference = cardSize,
                     onClick = {
@@ -343,7 +343,7 @@ fun DashboardScreen(
                     title = "Ventas",
                     icon = Icons.AutoMirrored.Filled.TrendingUp,
                     color = AccentTurquoise,
-                    enabled = permissions.contains("VENTAS_VER") || permissions.contains("VENTAS_CREAR") || effectiveUserRole == UserRole.ADMINISTRADOR,
+                    enabled = permissions.contains("VENTAS_VER") || permissions.contains("VENTAS_CREAR") || effectiveUserRole == UserRole.ADMINISTRADOR || effectiveUserRole == UserRole.OPERADOR,
                     size = TileSize.MEDIUM,
                     cardSizePreference = cardSize,
                     onClick = { 

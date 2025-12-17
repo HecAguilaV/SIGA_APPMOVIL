@@ -28,7 +28,9 @@ data class Product(
     fun getPrecioDisplay(locale: Locale = Locale("es", "CL")): String {
         val value = getPrecioDouble()
         return if (value != null) {
-            NumberFormat.getCurrencyInstance(locale).format(value)
+            val format = NumberFormat.getCurrencyInstance(locale)
+            format.maximumFractionDigits = 0
+            format.format(value)
         } else "Sin precio"
     }
 }

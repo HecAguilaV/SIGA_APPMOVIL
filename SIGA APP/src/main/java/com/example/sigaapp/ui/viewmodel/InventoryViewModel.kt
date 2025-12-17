@@ -95,12 +95,15 @@ class InventoryViewModel(
                 val productsMap = products.associateBy { it.id }
                 
                 // Enrich stock with product data
-                val enrichedStock = stock.map { stockItem ->
+                val enrichedStock = stock.mapNotNull { stockItem ->
                     val producto = productsMap[stockItem.producto_id]
-                    android.util.Log.e("INVENTORY_DEBUG", "Stock ID ${stockItem.id}: producto_id=${stockItem.producto_id}, producto encontrado: ${producto != null}, precio: ${producto?.precioUnitario}")
-                    stockItem.copy(
-                        producto = producto
-                    )
+                    if (producto == null) {
+                        // Orphaned stock item (product was deleted but stock remains)
+                        // Ignore it to prevent "Product s/n"
+                        null
+                    } else {
+                        stockItem.copy(producto = producto)
+                    }
                 }.toMutableList()
 
                 // Ensure products without stock entries are still listed in the app

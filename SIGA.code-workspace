@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../SIGA-WEBCOMERCIAL"
+		},
+		{
+			"path": "../SIGA-WEBAPP"
+		},
+		{
+			"path": "../SIGA-BACKEND"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
