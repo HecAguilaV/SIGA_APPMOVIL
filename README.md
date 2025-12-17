@@ -11,15 +11,15 @@ Aplicación Android oficial del ecosistema SIGA. Esta versión corresponde a la 
 | Integrantes               | Héctor Aguila V. – Rol: Fullstack / Mobile          |
 | Repositorio backend       | https://github.com/HecAguilaV/SIGA_BACKEND.git      |
 | Repositorio web comercial | https://github.com/HecAguilaV/SIGA-WEBCOMERCIAL.git |
-| Repositorio app web       | https://github.com/HecAguilaV/SIGA_APPWEB.git       |
+| Repositorio app web       | https://github.com/HecAguilaV/SIGA_WEBAPP.git       |
 
 ---
 
 ## 1. Resumen ejecutivo
 - **Estado**: MVP operativo (inventario y stock en línea).
 - **Integraciones activas**:
-  - Web comercial: https://siga-web.vercel.app/
-  - Web App SaaS: https://siga-appweb.vercel.app/
+  - Web comercial: https://siga-webcomercial.vercel.app/
+  - Web App SaaS: https://siga-webapp.vercel.app/
   - Backend Kotlin + PostgreSQL en Railway: https://siga-backend-production.up.railway.app
   - Base de datos en AlwaysData (PostgreSQL) dividida en dos esquemas: uno para la web comercial y otro dedicado al SaaS (app móvil + web app).
   - **API externa**: https://mindicador.cl/api/dolar (indicador financiero diario consumido vía Ktor).
