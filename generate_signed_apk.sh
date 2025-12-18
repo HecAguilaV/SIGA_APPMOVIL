@@ -18,4 +18,11 @@ if [ $? -eq 0 ]; then
     ls -lh "SIGA APP/build/outputs/apk/release/"
 else
     echo "❌ Error al generar la APK."
+    exit 1
 fi
+
+# COPY TO RELEASES
+mkdir -p releases
+TIMESTAMP=$(date +"%Y%m%d_%H%M")
+cp "SIGA APP/build/outputs/apk/release/SIGA APP-release.apk" "releases/SIGA_APP_v2_$TIMESTAMP.apk"
+echo "📦 APK copiada a carpeta releases/ para subir a Git"
